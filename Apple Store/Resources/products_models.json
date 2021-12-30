@@ -1,0 +1,445 @@
+[
+    {
+        "id": 0,
+        "family": {
+            "id": 0,
+            "name": "Mac",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
+        },
+        "name": "MacBook Air",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-air-202110?wid=1200&hei=1000&fmt=p-jpg&qlt=95&.v=1633726242000",
+        "available_colors": [
+            "space_gray",
+            "gold",
+            "silver"
+        ],
+        "starting_price": 999
+    },
+    {
+        "id": 1,
+        "family": {
+            "id": 0,
+            "name": "Mac",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
+        },
+        "name": "MacBook Pro 13\"",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-pro-13-202110?wid=1200&hei=1000&fmt=p-jpg&qlt=95&.v=1633726243000",
+        "available_colors": [
+            "space_gray",
+            "silver"
+        ],
+        "starting_price": 1299
+    },
+    {
+        "id": 2,
+        "family": {
+            "id": 0,
+            "name": "Mac",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
+        },
+        "name": "MacBook Pro 14\"",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-pro-14-202110?wid=1200&hei=1000&fmt=p-jpg&qlt=95&.v=1633726243000",
+        "available_colors": [
+            "space_gray",
+            "silver"
+        ],
+        "starting_price": 1999
+    },
+    {
+        "id": 3,
+        "family": {
+            "id": 0,
+            "name": "Mac",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
+        },
+        "name": "MacBook Pro 16\"",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-pro-16-202110?wid=1200&hei=1000&fmt=p-jpg&qlt=95&.v=1633726244000",
+        "available_colors": [
+            "space_gray",
+            "silver"
+        ],
+        "starting_price": 2499
+    },
+    {
+        "id": 4,
+        "family": {
+            "id": 0,
+            "name": "Mac",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
+        },
+        "name": "iMac 24\"",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-imac-24-202108?wid=980&hei=1000&fmt=jpeg&qlt=80&.v=1625868688000",
+        "available_colors": [
+            "silver",
+            "blue",
+            "green",
+            "pink",
+            "yellow",
+            "orange",
+            "purple"
+        ],
+        "starting_price": 1299
+    },
+    {
+        "id": 5,
+        "family": {
+            "id": 0,
+            "name": "Mac",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
+        },
+        "name": "iMac 27\"",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-imac-27-202108?wid=1050&hei=1000&fmt=p-jpg&qlt=95&.v=1626106575000",
+        "starting_price": 1799
+    },
+    {
+        "id": 6,
+        "family": {
+            "id": 0,
+            "name": "Mac",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
+        },
+        "name": "Mac mini",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-mac-mini-202108?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1626106830000",
+        "starting_price": 699
+    },
+    {
+        "id": 7,
+        "family": {
+            "id": 0,
+            "name": "Mac",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
+        },
+        "name": "Mac Pro",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-mac-pro-202108?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1625864628000",
+        "starting_price": 5999
+    },
+    {
+        "id": 8,
+        "family": {
+            "id": 0,
+            "name": "Mac",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
+        },
+        "name": "Pro Display XDR",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-mac-pro-display-202108?wid=800&hei=1000&fmt=jpeg&qlt=80&.v=1625864626000",
+        "starting_price": 4999
+    },
+    {
+        "id": 9,
+        "family": {
+            "id": 1,
+            "name": "iPhone",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-iphone-nav-202109_GEO_US?wid=400&hei=260&fmt=png-alpha&.v=1630706116000"
+        },
+        "name": "iPhone 13 Pro",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphone13problue-202109?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1629948813000",
+        "available_colors": [
+            "sierra_blue",
+            "silver",
+            "gold",
+            "graphite"
+        ],
+        "starting_price": 999
+    },
+    {
+        "id": 10,
+        "family": {
+            "id": 1,
+            "name": "iPhone",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-iphone-nav-202109_GEO_US?wid=400&hei=260&fmt=png-alpha&.v=1630706116000"
+        },
+        "name": "iPhone 13",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphone13pink-202109?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1629948812000",
+        "available_colors": [
+            "pink",
+            "blue",
+            "midnight",
+            "starlight",
+            "product_red"
+        ],
+        "starting_price": 699
+    },
+    {
+        "id": 11,
+        "family": {
+            "id": 1,
+            "name": "iPhone",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-iphone-nav-202109_GEO_US?wid=400&hei=260&fmt=png-alpha&.v=1630706116000"
+        },
+        "name": "iPhone 12",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphone12purple-202109?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1629948811000",
+        "available_colors": [
+            "purple",
+            "blue",
+            "green",
+            "white",
+            "black",
+            "product_red"
+        ],
+        "starting_price": 599
+    },
+    {
+        "id": 12,
+        "family": {
+            "id": 1,
+            "name": "iPhone",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-iphone-nav-202109_GEO_US?wid=400&hei=260&fmt=png-alpha&.v=1630706116000"
+        },
+        "name": "iPhone SE",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphone-SE-202108?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1628098903000",
+        "available_colors": [
+            "white",
+            "black",
+            "product_red"
+        ],
+        "starting_price": 399
+    },
+    {
+        "id": 13,
+        "family": {
+            "id": 1,
+            "name": "iPhone",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-iphone-nav-202109_GEO_US?wid=400&hei=260&fmt=png-alpha&.v=1630706116000"
+        },
+        "name": "iPhone 11",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphone-11-202108?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1628098906000",
+        "available_colors": [
+            "purple",
+            "green",
+            "yellow",
+            "white",
+            "black",
+            "product_red"
+        ],
+        "starting_price": 499
+    },
+    {
+        "id": 14,
+        "family": {
+            "id": 2,
+            "name": "iPad",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-ipad-nav-202108?wid=400&hei=260&fmt=png-alpha&.v=1625783381000"
+        },
+        "name": "iPad Pro",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-card-40-pro-202108?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1627413382000",
+        "available_colors": [
+            "space_gray",
+            "silver",
+        ],
+        "starting_price": 799
+    },
+    {
+        "id": 15,
+        "family": {
+            "id": 2,
+            "name": "iPad",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-ipad-nav-202108?wid=400&hei=260&fmt=png-alpha&.v=1625783381000"
+        },
+        "name": "iPad Air",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-card-40-air-202108?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1627413381000",
+        "available_colors": [
+            "space_gray",
+            "silver",
+            "green",
+            "rose_gold",
+            "sky_blue"
+        ],
+        "starting_price": 599
+    },
+    {
+        "id": 16,
+        "family": {
+            "id": 2,
+            "name": "iPad",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-ipad-nav-202108?wid=400&hei=260&fmt=png-alpha&.v=1625783381000"
+        },
+        "name": "iPad",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-card-40-ipad-202109?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1630640992000",
+        "available_colors": [
+            "space_gray",
+            "silver"
+        ],
+        "starting_price": 329
+    },
+    {
+        "id": 17,
+        "family": {
+            "id": 2,
+            "name": "iPad",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-ipad-nav-202108?wid=400&hei=260&fmt=png-alpha&.v=1625783381000"
+        },
+        "name": "iPad mini",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-card-40-ipad-mini-202109?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1630457637000",
+        "available_colors": [
+            "space_gray",
+            "pink",
+            "purple",
+            "starlight"
+        ],
+        "starting_price": 499
+    },
+    {
+        "id": 18,
+        "family": {
+            "id": 3,
+            "name": "Apple Watch",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-watch-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1631823475000"
+        },
+        "name": "Apple Watch Series 7",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-s7-202109?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1632240465000",
+        "available_colors": [
+            "silver",
+            "blue",
+            "midnight",
+            "starlight",
+            "green",
+            "gold",
+            "graphite",
+            "space_black",
+            "titanium",
+            "product_red"
+        ],
+        "starting_price": 399
+    },
+    {
+        "id": 19,
+        "family": {
+            "id": 3,
+            "name": "Apple Watch",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-watch-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1631823475000"
+        },
+        "name": "Apple Watch SE",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-se-202109?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1629957411000",
+        "available_colors": [
+            "space_gray",
+            "silver",
+            "gold",
+        ],
+        "starting_price": 279
+    },
+    {
+        "id": 20,
+        "family": {
+            "id": 3,
+            "name": "Apple Watch",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-watch-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1631823475000"
+        },
+        "name": "Apple Watch Series 3",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-se-202109?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1629957411000",
+        "starting_price": 199
+    },
+    {
+        "id": 21,
+        "family": {
+            "id": 3,
+            "name": "Apple Watch",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-watch-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1631823475000"
+        },
+        "name": "Apple Watch Nike",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-nike-202109?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1633542356000",
+        "available_colors": [
+            "starlight",
+            "midnight"
+        ],
+        "starting_price": 399
+    },
+    {
+        "id": 22,
+        "family": {
+            "id": 3,
+            "name": "Apple Watch",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-watch-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1631823475000"
+        },
+        "name": "Apple Watch Hermès",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-hermes-202109?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1633542508000",
+        "available_colors": [
+            "starlight",
+            "midnight"
+        ],
+        "starting_price": 1229
+    },
+    {
+        "id": 23,
+        "family": {
+            "id": 4,
+            "name": "AirPods",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-airpods-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1633718741000"
+        },
+        "name": "AirPods Max",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-hero-select-202011?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604709293000",
+        "starting_price": 549
+    },
+    {
+        "id": 24,
+        "family": {
+            "id": 4,
+            "name": "AirPods",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-airpods-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1633718741000"
+        },
+        "name": "AirPods (3rd generation)",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MME73_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=80&.v=1632861338000",
+        "starting_price": 179
+    },
+    {
+        "id": 25,
+        "family": {
+            "id": 4,
+            "name": "AirPods",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-airpods-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1633718741000"
+        },
+        "name": "AirPods Pro",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWP22_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=80&.v=1591634643000",
+        "starting_price": 249
+    },
+    {
+        "id": 25,
+        "family": {
+            "id": 4,
+            "name": "AirPods",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-airpods-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1633718741000"
+        },
+        "name": "AirPods (2nd generation)",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MV7N2?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1551489688005",
+        "starting_price": 129
+    },
+    {
+        "id": 26,
+        "family": {
+            "id": 5,
+            "name": "AirTags",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-airtags-nav-202108?wid=400&hei=260&fmt=png-alpha&.v=1625783380000"
+        },
+        "name": "AirTag",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airtag-double-select-202104?wid=890&hei=740&fmt=jpeg&qlt=80&.v=1617761672000",
+        "starting_price": 29
+    },
+    {
+        "id": 27,
+        "family": {
+            "id": 6,
+            "name": "Apple TV",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-appletv-nav-202108?wid=400&hei=260&fmt=png-alpha&.v=1625783378000"
+        },
+        "name": "Apple TV 4K",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-tv-4k-hero-select-202104?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1619139498000",
+        "starting_price": 179
+    },
+    {
+        "id": 28,
+        "family": {
+            "id": 7,
+            "name": "HomePod mini",
+            "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-homepod-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1633355783000"
+        },
+        "name": "HomePod mini",
+        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-homepod-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1633355783000",
+        "available_colors": [
+            "space_gray",
+            "blue",
+            "yellow",
+            "orange",
+            "white"
+        ],
+        "starting_price": 99
+    },
+]
