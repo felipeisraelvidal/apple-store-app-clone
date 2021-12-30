@@ -24,8 +24,8 @@ class ShopCoordinator: Coordinator {
     }
     
     func openProductDetails(_ model: ProductModel) {
-        let viewController = ProductModelDetailsViewController()
-        viewController.selectedProductModel = model
+        let viewModel = ProductDetailsViewModel(selectedProductModel: model)
+        let viewController = ProductDetailsViewController(viewModel: viewModel)
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
     }
