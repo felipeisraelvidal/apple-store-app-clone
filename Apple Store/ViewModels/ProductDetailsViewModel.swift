@@ -9,9 +9,9 @@ import Foundation
 
 final class ProductDetailsViewModel {
     
-    private(set) var selectedProductModel: ProductModel!
+    private(set) var selectedProduct: Product!
     
-    init(selectedProductModel: ProductModel) {
-        self.selectedProductModel = selectedProductModel
+    init(selectedProduct: Product) {
+        self.selectedProduct = selectedProduct
     }
 }

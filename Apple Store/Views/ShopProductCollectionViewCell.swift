@@ -1,5 +1,5 @@
 //
-//  ProductModelCollectionViewCell.swift
+//  ShopProductCollectionViewCell.swift
 //  Apple Store
 //
 //  Created by Felipe Vidal on 30/12/21.
@@ -8,13 +8,13 @@
 import UIKit
 import SDWebImage
 
-class ProductModelCollectionViewCell: UICollectionViewCell {
+class ShopProductCollectionViewCell: UICollectionViewCell {
     
-    static let identifier = "ProductModelCollectionViewCell"
+    static let identifier = "ShopProductCollectionViewCell"
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAsp   ectFit
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -87,7 +87,7 @@ class ProductModelCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func configure(with model: ProductModel) {
+    func configure(with model: Product) {
         nameLabel.text = model.name
         priceLabel.text = "Starts at $\(model.startingPrice)"
         

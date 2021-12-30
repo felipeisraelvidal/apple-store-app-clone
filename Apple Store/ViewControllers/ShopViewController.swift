@@ -20,7 +20,7 @@ class ShopViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.contentInset.top = 24
         
-        tableView.register(ProductFamilyCollectionTableViewCell.self, forCellReuseIdentifier: ProductFamilyCollectionTableViewCell.identifier)
+        tableView.register(ShopProductFamilyCollectionTableViewCell.self, forCellReuseIdentifier: ShopProductFamilyCollectionTableViewCell.identifier)
         tableView.register(ShopProductFamilySectionHeader.self, forHeaderFooterViewReuseIdentifier: ShopProductFamilySectionHeader.identifier)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -94,7 +94,7 @@ extension ShopViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductFamilyCollectionTableViewCell.identifier, for: indexPath) as? ProductFamilyCollectionTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ShopProductFamilyCollectionTableViewCell.identifier, for: indexPath) as? ShopProductFamilyCollectionTableViewCell else {
             return UITableViewCell()
         }
         

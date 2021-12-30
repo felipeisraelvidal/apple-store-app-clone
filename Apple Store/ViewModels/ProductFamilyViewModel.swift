@@ -8,7 +8,7 @@
 import Foundation
 
 class ProductFamilyViewModel {
-    @Published private(set) var models: [ProductModel] = []
+    @Published private(set) var models: [Product] = []
     
     func fetchModels(for family: ProductFamily) {
         NetworkManager.shared.getModels(for: family) { result in

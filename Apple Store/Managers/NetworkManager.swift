@@ -24,13 +24,13 @@ class NetworkManager {
         }
     }
     
-    func getModels(for family: ProductFamily, _ completion: @escaping (Result<[ProductModel], Error>) -> Void) {
+    func getModels(for family: ProductFamily, _ completion: @escaping (Result<[Product], Error>) -> Void) {
         if let url = Bundle.main.url(forResource: "products_models", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
-                let models = try decoder.decode([ProductModel].self, from: data)
-                let filtered = models.filter({ $0.family?.id == family.id })
+                let products = try decoder.decode([Product].self, from: data)
+                let filtered = products.filter({ $0.family?.id == family.id })
                 completion(.success(filtered))
             } catch {
                 completion(.failure(error))

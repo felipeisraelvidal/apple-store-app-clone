@@ -27,7 +27,7 @@ class ProductDetailsViewController: UIViewController {
         
         configureNavigationBar()
         
-        title = viewModel.selectedProductModel.name
+        title = viewModel.selectedProduct.name
         
         view.backgroundColor = .systemBackground
     }

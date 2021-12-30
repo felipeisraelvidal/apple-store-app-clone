@@ -1,5 +1,5 @@
 //
-//  ProductFamilyCollectionTableViewCell.swift
+//  ShopProductFamilyCollectionTableViewCell.swift
 //  Apple Store
 //
 //  Created by Felipe Vidal on 29/12/21.
@@ -8,14 +8,14 @@
 import UIKit
 import Combine
 
-class ProductFamilyCollectionTableViewCell: UITableViewCell {
+class ShopProductFamilyCollectionTableViewCell: UITableViewCell {
     
-    static let identifier = "ProductFamilyCollectionTableViewCell"
+    static let identifier = "ShopProductFamilyCollectionTableViewCell"
     
     private var anyCancellable = Set<AnyCancellable>()
     private let viewModel = ProductFamilyViewModel()
     
-    var onSelectModel: ((ProductModel) -> Void)?
+    var onSelectModel: ((Product) -> Void)?
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -29,7 +29,7 @@ class ProductFamilyCollectionTableViewCell: UITableViewCell {
         collectionView.backgroundColor = .systemGroupedBackground
         collectionView.showsHorizontalScrollIndicator = false
         
-        collectionView.register(ProductModelCollectionViewCell.self, forCellWithReuseIdentifier: ProductModelCollectionViewCell.identifier)
+        collectionView.register(ShopProductCollectionViewCell.self, forCellWithReuseIdentifier: ShopProductCollectionViewCell.identifier)
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
@@ -74,7 +74,7 @@ class ProductFamilyCollectionTableViewCell: UITableViewCell {
 
 }
 
-extension ProductFamilyCollectionTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
+extension ShopProductFamilyCollectionTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -85,7 +85,7 @@ extension ProductFamilyCollectionTableViewCell: UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductModelCollectionViewCell.identifier, for: indexPath) as? ProductModelCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShopProductCollectionViewCell.identifier, for: indexPath) as? ShopProductCollectionViewCell else {
             return UICollectionViewCell()
         }
         
