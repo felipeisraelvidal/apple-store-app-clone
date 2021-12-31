@@ -72,6 +72,7 @@
 		5573ED99277E8AD2007FA0D4 /* BuyProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyProductViewModel.swift; sourceTree = "<group>"; };
 		5573ED9B277E9DB9007FA0D4 /* BuyProductOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyProductOptionTableViewCell.swift; sourceTree = "<group>"; };
 		5573ED9D277EA924007FA0D4 /* BuyProductTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyProductTitleTableViewCell.swift; sourceTree = "<group>"; };
+		5573ED9F277EB799007FA0D4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55C31CD2277D4E64003FAA91 /* Apple Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C31CD5277D4E64003FAA91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55C31CD7277D4E64003FAA91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +138,7 @@
 		55C31CC9277D4E64003FAA91 = {
 			isa = PBXGroup;
 			children = (
+				5573ED9F277EB799007FA0D4 /* README.md */,
 				55C31CD4277D4E64003FAA91 /* Apple Store */,
 				55C31CEB277D4E67003FAA91 /* Apple StoreTests */,
 				55C31CF5277D4E67003FAA91 /* Apple StoreUITests */,
