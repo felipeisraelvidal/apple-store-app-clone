@@ -6,12 +6,81 @@
             "name": "Mac",
             "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
         },
+        "model": "MacBook Air",
         "name": "MacBook Air",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-air-202110?wid=1200&hei=1000&fmt=p-jpg&qlt=95&.v=1633726242000",
         "available_colors": [
             "space_gray",
             "gold",
             "silver"
+        ],
+        "options": [
+            {
+                "id": 0,
+                "name": "Apple M1 Chip with 8-Core CPU and 7-Core GPU\n256GB Storage",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000",
+                "specs": [
+                    "Apple M1 chip with 8‑core CPU, 7‑core GPU, and 16‑core Neural Engine",
+                    "8GB unified memory",
+                    "256GB SSD storage",
+                    "Retina display with True Tone",
+                    "Magic Keyboard",
+                    "Touch ID",
+                    "Force Touch trackpad",
+                    "Two Thunderbolt / USB 4 ports"
+                ],
+                "price": 999,
+                "available_finishes": [
+                    {
+                        "raw_value": "space_gray",
+                        "name": "Space Gray",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000"
+                    },
+                    {
+                        "raw_value": "gold",
+                        "name": "Gold",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-gold-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000"
+                    },
+                    {
+                        "raw_value": "silver",
+                        "name": "Silver",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-silver-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000"
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "name": "Apple M1 Chip with 8-Core CPU and 8-Core GPU\n512GB Storage",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000",
+                "specs": [
+                    "Apple M1 chip with 8‑core CPU, 8‑core GPU, and 16‑core Neural Engine",
+                    "8GB unified memory",
+                    "512GB SSD storage",
+                    "Retina display with True Tone",
+                    "Magic Keyboard",
+                    "Touch ID",
+                    "Force Touch trackpad",
+                    "Two Thunderbolt / USB 4 ports"
+                ],
+                "price": 1249,
+                "available_finishes": [
+                    {
+                        "raw_value": "space_gray",
+                        "name": "Space Gray",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000"
+                    },
+                    {
+                        "raw_value": "gold",
+                        "name": "Gold",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-gold-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000"
+                    },
+                    {
+                        "raw_value": "silver",
+                        "name": "Silver",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-silver-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000"
+                    }
+                ]
+            }
         ],
         "starting_price": 999
     },
@@ -22,11 +91,70 @@
             "name": "Mac",
             "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
         },
+        "model": "MacBook Pro",
         "name": "MacBook Pro 13\"",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-pro-13-202110?wid=1200&hei=1000&fmt=p-jpg&qlt=95&.v=1633726243000",
         "available_colors": [
             "space_gray",
             "silver"
+        ],
+        "options": [
+            {
+                "id": 0,
+                "name": "Apple M1 Chip with 8‑Core CPU and 8‑Core GPU\n256GB SSD Storage",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_US?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632948875000",
+                "specs": [
+                    "Apple M1 chip with 8-core CPU, 8-core GPU, and 16-core Neural Engine",
+                    "8GB unified memory",
+                    "256GB SSD storage",
+                    "13-inch Retina display with True Tone",
+                    "Magic Keyboard",
+                    "Touch Bar and Touch ID",
+                    "Force Touch trackpad",
+                    "Two Thunderbolt / USB 4 ports"
+                ],
+                "price": 1299,
+                "available_finishes": [
+                    {
+                        "raw_value": "space_gray",
+                        "name": "Space Gray",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_US?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632948875000"
+                    },
+                    {
+                        "raw_value": "silver",
+                        "name": "Silver",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-silver-select-202011_GEO_US?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632950226000"
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "name": "Apple M1 Chip with 8‑Core CPU and 8‑Core GPU\n512GB SSD Storage",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_US?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632948875000",
+                "specs": [
+                    "Apple M1 chip with 8-core CPU, 8-core GPU, and 16-core Neural Engine",
+                    "8GB unified memory",
+                    "512GB SSD storage",
+                    "13-inch Retina display with True Tone",
+                    "Magic Keyboard",
+                    "Touch Bar and Touch ID",
+                    "Force Touch trackpad",
+                    "Two Thunderbolt / USB 4 ports"
+                ],
+                "price": 1499,
+                "available_finishes": [
+                    {
+                        "raw_value": "space_gray",
+                        "name": "Space Gray",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_US?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632948875000"
+                    },
+                    {
+                        "raw_value": "silver",
+                        "name": "Silver",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-silver-select-202011_GEO_US?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632950226000"
+                    }
+                ]
+            }
         ],
         "starting_price": 1299
     },
@@ -37,11 +165,66 @@
             "name": "Mac",
             "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
         },
+        "model": "MacBook Pro",
         "name": "MacBook Pro 14\"",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-pro-14-202110?wid=1200&hei=1000&fmt=p-jpg&qlt=95&.v=1633726243000",
         "available_colors": [
             "space_gray",
             "silver"
+        ],
+        "options": [
+            {
+                "id": 0,
+                "name": "M1 PRO\n8-Core CPU\n14-Core GPU\n16GB Unified Memory\n512GB SSD Storage",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788573000",
+                "specs": [
+                    "16-core Neural Engine",
+                    "14-inch Liquid Retina XDR display",
+                    "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe 3 port",
+                    "Magic Keyboard with Touch ID",
+                    "Force Touch trackpad",
+                    "67W USB-C Power Adapter"
+                ],
+                "price": 1999,
+                "available_finishes": [
+                    {
+                        "raw_value": "space_gray",
+                        "name": "Space Gray",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788573000"
+                    },
+                    {
+                        "raw_value": "silver",
+                        "name": "Silver",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-silver-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788573000"
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "name": "M1 PRO\n10-Core CPU\n16-Core GPU\n16GB Unified Memory\n1TB SSD Storage",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788573000",
+                "specs": [
+                    "16-core Neural Engine",
+                    "14-inch Liquid Retina XDR display",
+                    "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe 3 port",
+                    "Magic Keyboard with Touch ID",
+                    "Force Touch trackpad",
+                    "96W USB-C Power Adapter"
+                ],
+                "price": 2499,
+                "available_finishes": [
+                    {
+                        "raw_value": "space_gray",
+                        "name": "Space Gray",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788573000"
+                    },
+                    {
+                        "raw_value": "silver",
+                        "name": "Silver",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-silver-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788573000"
+                    }
+                ]
+            }
         ],
         "starting_price": 1999
     },
@@ -52,11 +235,92 @@
             "name": "Mac",
             "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
         },
+        "model": "MacBook Pro",
         "name": "MacBook Pro 16\"",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-pro-16-202110?wid=1200&hei=1000&fmt=p-jpg&qlt=95&.v=1633726244000",
         "available_colors": [
             "space_gray",
             "silver"
+        ],
+        "options": [
+            {
+                "id": 0,
+                "name": "M1 PRO\n10-Core CPU\n16-Core GPU\n16GB Unified Memory\n512GB SSD Storage",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-spacegray-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788574000",
+                "specs": [
+                    "16-core Neural Engine",
+                    "16-inch Liquid Retina XDR display",
+                    "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe 3 port",
+                    "Magic Keyboard with Touch ID",
+                    "Force Touch trackpad",
+                    "140W USB-C Power Adapter"
+                ],
+                "price": 2499,
+                "available_finishes": [
+                    {
+                        "raw_value": "space_gray",
+                        "name": "Space Gray",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-spacegray-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788574000"
+                    },
+                    {
+                        "raw_value": "silver",
+                        "name": "Silver",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-silver-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788573000"
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "name": "M1 PRO\n10-Core CPU\n16-Core GPU\n16GB Unified Memory\n1TB SSD Storage",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788573000",
+                "specs": [
+                    "16-core Neural Engine",
+                    "16-inch Liquid Retina XDR display",
+                    "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe 3 port",
+                    "Magic Keyboard with Touch ID",
+                    "Force Touch trackpad",
+                    "140W USB-C Power Adapter"
+                ],
+                "price": 2699,
+                "available_finishes": [
+                    {
+                        "raw_value": "space_gray",
+                        "name": "Space Gray",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-spacegray-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788574000"
+                    },
+                    {
+                        "raw_value": "silver",
+                        "name": "Silver",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-silver-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788573000"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "M1 MAX\n10-Core CPU\n32-Core GPU\n32GB Unified Memory\n1TB SSD Storage",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-spacegray-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788574000",
+                "specs": [
+                    "16-core Neural Engine",
+                    "16-inch Liquid Retina XDR display",
+                    "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe 3 port",
+                    "Magic Keyboard with Touch ID",
+                    "Force Touch trackpad",
+                    "140W USB-C Power Adapter"
+                ],
+                "price": 3499,
+                "available_finishes": [
+                    {
+                        "raw_value": "space_gray",
+                        "name": "Space Gray",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-spacegray-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788574000"
+                    },
+                    {
+                        "raw_value": "silver",
+                        "name": "Silver",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-silver-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788573000"
+                    }
+                ]
+            }
         ],
         "starting_price": 2499
     },
@@ -67,6 +331,7 @@
             "name": "Mac",
             "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
         },
+        "model": "iMac",
         "name": "iMac 24\"",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-imac-24-202108?wid=980&hei=1000&fmt=jpeg&qlt=80&.v=1625868688000",
         "available_colors": [
@@ -87,6 +352,7 @@
             "name": "Mac",
             "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
         },
+        "model": "iMac",
         "name": "iMac 27\"",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-imac-27-202108?wid=1050&hei=1000&fmt=p-jpg&qlt=95&.v=1626106575000",
         "starting_price": 1799
@@ -98,6 +364,7 @@
             "name": "Mac",
             "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
         },
+        "model": "Mac mini",
         "name": "Mac mini",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-mac-mini-202108?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1626106830000",
         "starting_price": 699
@@ -109,6 +376,7 @@
             "name": "Mac",
             "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
         },
+        "model": "Mac Pro",
         "name": "Mac Pro",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-mac-pro-202108?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1625864628000",
         "starting_price": 5999
@@ -120,6 +388,7 @@
             "name": "Mac",
             "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
         },
+        "model": "Pro Display XDR",
         "name": "Pro Display XDR",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-mac-pro-display-202108?wid=800&hei=1000&fmt=jpeg&qlt=80&.v=1625864626000",
         "starting_price": 4999
@@ -131,6 +400,7 @@
             "name": "iPhone",
             "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-iphone-nav-202109_GEO_US?wid=400&hei=260&fmt=png-alpha&.v=1630706116000"
         },
+        "model": "iPhone 13 Pro",
         "name": "iPhone 13 Pro",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphone13problue-202109?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1629948813000",
         "available_colors": [
@@ -148,6 +418,7 @@
             "name": "iPhone",
             "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-iphone-nav-202109_GEO_US?wid=400&hei=260&fmt=png-alpha&.v=1630706116000"
         },
+        "model": "iPhone 13",
         "name": "iPhone 13",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphone13pink-202109?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1629948812000",
         "available_colors": [
@@ -166,6 +437,7 @@
             "name": "iPhone",
             "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-iphone-nav-202109_GEO_US?wid=400&hei=260&fmt=png-alpha&.v=1630706116000"
         },
+        "model": "iPhone 12",
         "name": "iPhone 12",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphone12purple-202109?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1629948811000",
         "available_colors": [
@@ -185,6 +457,7 @@
             "name": "iPhone",
             "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-iphone-nav-202109_GEO_US?wid=400&hei=260&fmt=png-alpha&.v=1630706116000"
         },
+        "model": "iPhone SE",
         "name": "iPhone SE",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphone-SE-202108?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1628098903000",
         "available_colors": [
