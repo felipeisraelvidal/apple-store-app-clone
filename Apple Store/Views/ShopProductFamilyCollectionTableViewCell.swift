@@ -16,10 +16,10 @@ class ShopProductFamilyCollectionTableViewCell: UITableViewCell {
     private let viewModel = ProductFamilyViewModel()
     
     var onSelectModel: ((Product) -> Void)?
+    var onTapBuyButton: ((Product) -> Void)?
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 200, height: 250)
         layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         layout.minimumLineSpacing = 16
         layout.minimumInteritemSpacing = 16
@@ -74,7 +74,7 @@ class ShopProductFamilyCollectionTableViewCell: UITableViewCell {
 
 }
 
-extension ShopProductFamilyCollectionTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
+extension ShopProductFamilyCollectionTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -84,12 +84,18 @@ extension ShopProductFamilyCollectionTableViewCell: UICollectionViewDataSource, 
         return viewModel.models.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 200, height: collectionView.bounds.height)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShopProductCollectionViewCell.identifier, for: indexPath) as? ShopProductCollectionViewCell else {
             return UICollectionViewCell()
         }
         
         cell.configure(with: viewModel.models[indexPath.item])
+        
+        cell.onTapBuyButton = onTapBuyButton
         
         return cell
     }
