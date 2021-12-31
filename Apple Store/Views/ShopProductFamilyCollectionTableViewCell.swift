@@ -85,7 +85,9 @@ extension ShopProductFamilyCollectionTableViewCell: UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: collectionView.bounds.height)
+        let height = collectionView.bounds.height
+        let width = (height * 200) / 250
+        return CGSize(width: width, height: collectionView.bounds.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
