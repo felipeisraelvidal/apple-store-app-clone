@@ -33,10 +33,21 @@ class ShopCoordinator: Coordinator {
     }
     
     func buyProduct(_ model: Product) {
-        let viewModel = BuyProductViewModel(selectedProduct: model)
-        let viewController = BuyProductViewController(viewModel: viewModel)
-        viewController.coordinator = self
-        navigationController.pushViewController(viewController, animated: true)
+        guard let options = model.options, !options.isEmpty else {
+            print("This product has no options")
+            return
+        }
+        
+        if options.count > 1 {
+            // Show options selector
+            
+            let viewModel = BuyProductViewModel(selectedProduct: model)
+            let viewController = BuyProductViewController(viewModel: viewModel)
+            viewController.coordinator = self
+            navigationController.pushViewController(viewController, animated: true)
+        } else {
+            // Show product customization
+        }
     }
     
     func dismiss(_ viewController: UIViewController, animated: Bool = true) {

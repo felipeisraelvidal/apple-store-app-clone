@@ -35,8 +35,8 @@ extension Product {
         let id: Int
         let name: String
         let imageURL: String?
-        let specs: [String]
-        let price: Double
+        let specs: [String]?
+        let price: Double?
         let availableFinishes: [Finish]?
         
         enum CodingKeys: String, CodingKey {

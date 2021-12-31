@@ -572,6 +572,44 @@
         "model": "Mac mini",
         "name": "Mac mini",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-mac-mini-202108?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1626106830000",
+        "options": [
+            {
+                "id": 0,
+                "name": "Apple M1 Chip with 8-Core CPU and 8-Core GPU\n256GB Storage",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-mini-hero-202011?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1603403462000",
+                "specs": [
+                    "Apple M1 chip with 8-core CPU, 8-core GPU, and 16-core Neural Engine",
+                    "8GB unified memory",
+                    "256GB SSD storage",
+                    "Gigabit Ethernet",
+                ],
+                "price": 699,
+            },
+            {
+                "id": 1,
+                "name": "Apple M1 Chip with 8-Core CPU and 8-Core GPU\n512GB Storage",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-mini-hero-202011?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1603403462000",
+                "specs": [
+                    "Apple M1 chip with 8-core CPU, 8-core GPU, and 16-core Neural Engine",
+                    "8GB unified memory",
+                    "512GB SSD storage",
+                    "Gigabit Ethernet",
+                ],
+                "price": 899,
+            },
+            {
+                "id": 2,
+                "name": "3.0GHz Intel Core i5 6-Core Processor with Intel UHD Graphics 630\n512GB Storage",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-mini-hero-spacegray-202011?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1603580359000",
+                "specs": [
+                    "3.0GHz 6-core 8th-generation Intel Core i5 processor with Intel UHD Graphics 630",
+                    "Turbo Boost up to 4.1GHz",
+                    "8GB memory",
+                    "512GB PCIe-based SSD storage",
+                ],
+                "price": 1099,
+            }
+        ],
         "starting_price": 699
     },
     {
@@ -584,6 +622,38 @@
         "model": "Mac Pro",
         "name": "Mac Pro",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-mac-pro-202108?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1625864628000",
+        "options": [
+            {
+                "id": 0,
+                "name": "Mac Pro Towel",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-pro-hero-cto?wid=554&hei=444&fmt=jpeg&qlt=80&.v=1572646185753",
+                "specs": [
+                    "3.5GHz 8‑core Intel Xeon W processor, Turbo Boost up to 4.0GHz",
+                    "32GB (4x8GB) of DDR4 ECC memory",
+                    "Radeon Pro 580X with 8GB of GDDR5 memory",
+                    "256GB SSD storage",
+                    "Stainless steel frame with feet",
+                    "Magic Mouse",
+                    "Magic Keyboard with Numeric Keypad - US English"
+                ],
+                "price": 5999,
+            },
+            {
+                "id": 1,
+                "name": "Mac Pro Rack",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-pro-rack-hero-cto?wid=704&hei=326&fmt=jpeg&qlt=80&.v=1572546631194",
+                "specs": [
+                    "3.5GHz 8‑core Intel Xeon W processor, Turbo Boost up to 4.0GHz",
+                    "32GB (4x8GB) of DDR4 ECC memory",
+                    "Radeon Pro 580X with 8GB of GDDR5 memorye",
+                    "256GB SSD storage",
+                    "Rack mounting rails (ships in separate box)",
+                    "Magic Mouse",
+                    "Magic Keyboard with Numeric Keypad - US English"
+                ],
+                "price": 6499,
+            }
+        ],
         "starting_price": 5999
     },
     {

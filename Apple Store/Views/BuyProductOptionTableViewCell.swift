@@ -140,9 +140,9 @@ class BuyProductOptionTableViewCell: UITableViewCell {
         self.productOption = model
         
         nameLabel.text = model.name
-        specsLabel.text = model.specs.joined(separator: "\n")
+        specsLabel.text = model.specs?.joined(separator: "\n") ?? ""
         
-        priceLabel.text = "$\(model.price)"
+        priceLabel.text = "$\(model.price ?? 0)"
         
         if let finishes = model.availableFinishes, !finishes.isEmpty {
             var index = 0
