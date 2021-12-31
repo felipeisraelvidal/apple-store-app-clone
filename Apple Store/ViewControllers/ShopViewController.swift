@@ -19,6 +19,8 @@ class ShopViewController: UIViewController {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.separatorStyle = .none
         tableView.contentInset.top = 24
+        tableView.allowsSelection = false
+        tableView.insetsContentViewsToSafeArea = false
         
         tableView.register(ShopProductFamilyCollectionTableViewCell.self, forCellReuseIdentifier: ShopProductFamilyCollectionTableViewCell.identifier)
         tableView.register(ShopProductFamilySectionHeader.self, forHeaderFooterViewReuseIdentifier: ShopProductFamilySectionHeader.identifier)

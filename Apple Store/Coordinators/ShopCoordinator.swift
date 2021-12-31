@@ -28,6 +28,7 @@ class ShopCoordinator: Coordinator {
         let viewController = ProductDetailsViewController(viewModel: viewModel)
         viewController.coordinator = self
         let navController = UINavigationController(rootViewController: viewController)
+        navController.modalPresentationStyle = .fullScreen
         navigationController.topViewController?.present(navController, animated: true, completion: nil)
     }
     
