@@ -38,4 +38,8 @@ class ShopCoordinator: Coordinator {
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func dismiss(_ viewController: UIViewController, animated: Bool = true) {
+        viewController.dismiss(animated: animated, completion: nil)
+    }
 }
