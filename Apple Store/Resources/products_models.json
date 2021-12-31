@@ -343,6 +343,164 @@
             "orange",
             "purple"
         ],
+        "options": [
+            {
+                "id": 0,
+                "name": "Apple M1 Chip\n8-Core CPU\n7-Core GPU",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-blue-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000",
+                "specs": [
+                    "256GB storage",
+                    "8GB unified memory",
+                    "24-inch 4.5K Retina display",
+                    "Two Thunderbolt / USB 4 ports",
+                    "–",
+                    "–",
+                    "Magic Keyboard"
+                ],
+                "price": 1299,
+                "available_finishes": [
+                    {
+                        "raw_value": "blue",
+                        "name": "Blue",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-blue-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000"
+                    },
+                    {
+                        "raw_value": "green",
+                        "name": "Green",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-green-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000"
+                    },
+                    {
+                        "raw_value": "pink",
+                        "name": "Pink",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-pink-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492407000"
+                    },
+                    {
+                        "raw_value": "green",
+                        "name": "Green",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-green-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000"
+                    },
+                    {
+                        "raw_value": "silver",
+                        "name": "Silver",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-silver-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492408000"
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "name": "Apple M1 Chip\n8-Core CPU\n8-Core GPU",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-blue-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000",
+                "specs": [
+                    "256GB storage",
+                    "8GB unified memory",
+                    "24-inch 4.5K Retina display",
+                    "Two Thunderbolt / USB 4 ports",
+                    "Two USB 3 ports",
+                    "Gigabit Ethernet",
+                    "Magic Keyboard"
+                ],
+                "price": 1499,
+                "available_finishes": [
+                    {
+                        "raw_value": "blue",
+                        "name": "Blue",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-blue-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000"
+                    },
+                    {
+                        "raw_value": "green",
+                        "name": "Green",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-green-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000"
+                    },
+                    {
+                        "raw_value": "pink",
+                        "name": "Pink",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-pink-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492407000"
+                    },
+                    {
+                        "raw_value": "green",
+                        "name": "Green",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-green-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000"
+                    },
+                    {
+                        "raw_value": "silver",
+                        "name": "Silver",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-silver-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492408000"
+                    },
+                    {
+                        "raw_value": "yellow",
+                        "name": "Yellow",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-yellow-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492407000"
+                    },
+                    {
+                        "raw_value": "orange",
+                        "name": "Orange",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-orange-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492406000"
+                    },
+                    {
+                        "raw_value": "purple",
+                        "name": "Purple",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-purple-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492406000"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Apple M1 Chip\n8-Core CPU\n8-Core GPU",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-blue-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000",
+                "specs": [
+                    "512GB storage",
+                    "8GB unified memory",
+                    "24-inch 4.5K Retina display",
+                    "Two Thunderbolt / USB 4 ports",
+                    "Two USB 3 ports",
+                    "Gigabit Ethernet",
+                    "Magic Keyboard"
+                ],
+                "price": 1699,
+                "available_finishes": [
+                    {
+                        "raw_value": "blue",
+                        "name": "Blue",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-blue-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000"
+                    },
+                    {
+                        "raw_value": "green",
+                        "name": "Green",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-green-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000"
+                    },
+                    {
+                        "raw_value": "pink",
+                        "name": "Pink",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-pink-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492407000"
+                    },
+                    {
+                        "raw_value": "green",
+                        "name": "Green",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-green-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000"
+                    },
+                    {
+                        "raw_value": "silver",
+                        "name": "Silver",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-silver-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492408000"
+                    },
+                    {
+                        "raw_value": "yellow",
+                        "name": "Yellow",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-yellow-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492407000"
+                    },
+                    {
+                        "raw_value": "orange",
+                        "name": "Orange",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-orange-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492406000"
+                    },
+                    {
+                        "raw_value": "purple",
+                        "name": "Purple",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-purple-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492406000"
+                    }
+                ]
+            }
+        ],
         "starting_price": 1299
     },
     {
@@ -355,6 +513,53 @@
         "model": "iMac",
         "name": "iMac 27\"",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-imac-27-202108?wid=1050&hei=1000&fmt=p-jpg&qlt=95&.v=1626106575000",
+        "options": [
+            {
+                "id": 0,
+                "name": "3.1GHz 6-Core Processor with Turbo Boost up to 4.5GHz\n256GB Storage\nRetina 5K Display",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-27-selection-hero-202008?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1594932848000",
+                "specs": [
+                    "3.1GHz 6-core 10th-generation Intel Core i5 processor",
+                    "Turbo Boost up to 4.5GHz",
+                    "8GB 2666MHz DDR4 memory, configurable up to 128GB",
+                    "256GB SSD storage",
+                    "Radeon Pro 5300 with 4GB of GDDR6 memory",
+                    "Two Thunderbolt 3 ports",
+                    "Retina 5K 5120-by-2880 P3 display with True Tone (optional nano-texture glass available)"
+                ],
+                "price": 1799,
+            },
+            {
+                "id": 1,
+                "name": "3.3GHz 6-Core Processor with Turbo Boost up to 4.8GHz\n512GB Storage\nRetina 5K Display",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-27-selection-hero-202008?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1594932848000",
+                "specs": [
+                    "3.3GHz 6-core 10th-generation Intel Core i5 processor",
+                    "Turbo Boost up to 4.8GHz",
+                    "8GB 2666MHz DDR4 memory, configurable up to 128GB",
+                    "512GB SSD storage",
+                    "Radeon Pro 5300 with 4GB of GDDR6 memory",
+                    "Two Thunderbolt 3 ports",
+                    "Retina 5K 5120-by-2880 P3 display with True Tone (optional nano-texture glass available)"
+                ],
+                "price": 1999,
+            },
+            {
+                "id": 2,
+                "name": "3.8GHz 8-Core Processor with Turbo Boost up to 5.0GHz\n512GB Storage\nRetina 5K Display",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-27-selection-hero-202008?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1594932848000",
+                "specs": [
+                    "3.8GHz 8-core 10th-generation Intel Core i7 processor",
+                    "Turbo Boost up to 5.0GHz",
+                    "8GB 2666MHz DDR4 memory, configurable up to 128GB",
+                    "512GB SSD storage",
+                    "Radeon Pro 5500 XT with 8GB of GDDR6 memory",
+                    "Two Thunderbolt 3 ports",
+                    "Retina 5K 5120-by-2880 P3 display with True Tone (optional nano-texture glass available)"
+                ],
+                "price": 2299,
+            }
+        ],
         "starting_price": 1799
     },
     {
