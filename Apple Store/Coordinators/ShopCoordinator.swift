@@ -27,6 +27,14 @@ class ShopCoordinator: Coordinator {
         let viewModel = ProductDetailsViewModel(selectedProduct: model)
         let viewController = ProductDetailsViewController(viewModel: viewModel)
         viewController.coordinator = self
+        let navController = UINavigationController(rootViewController: viewController)
+        navigationController.topViewController?.present(navController, animated: true, completion: nil)
+    }
+    
+    func buyProduct(_ model: Product) {
+        let viewModel = BuyProductViewModel(selectedProduct: model)
+        let viewController = BuyProductViewController(viewModel: viewModel)
+        viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
     }
 }

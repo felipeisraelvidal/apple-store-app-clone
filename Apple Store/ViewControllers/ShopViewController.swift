@@ -110,7 +110,7 @@ extension ShopViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         cell.onTapBuyButton = { [weak self] model in
-            self?.coordinator?.openProductDetails(model)
+            self?.coordinator?.buyProduct(model)
         }
         
         return cell
