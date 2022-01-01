@@ -38,6 +38,7 @@ extension Product {
         let specs: [String]?
         let price: Double?
         let availableFinishes: [Finish]?
+        let customizations: [Customization]?
         
         enum CodingKeys: String, CodingKey {
             case id
@@ -46,6 +47,7 @@ extension Product {
             case specs
             case price
             case availableFinishes = "available_finishes"
+            case customizations
         }
     }
     
@@ -58,6 +60,38 @@ extension Product {
             case rawValue = "raw_value"
             case name
             case imageURL = "image_url"
+        }
+    }
+    
+    struct Customization: Codable {
+        let id: Int
+        let name: String
+        let options: [Option]
+        
+        enum CodingKeys: String, CodingKey {
+            case id
+            case name
+            case options
+        }
+        
+        enum PriceChangeMethod: String, Codable {
+            case none = "none"
+            case sumBasePrice = "sum_base_price"
+            case change_base_price = "change_base_price"
+        }
+        
+        struct Option: Codable {
+            let id: Int
+            let name: String
+            let price: Double
+            let priceChangeMethod: PriceChangeMethod?
+            
+            enum CodingKeys: String, CodingKey {
+                case id
+                case name
+                case price
+                case priceChangeMethod = "price_change_method"
+            }
         }
     }
     

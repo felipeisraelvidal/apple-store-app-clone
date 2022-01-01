@@ -47,7 +47,18 @@ class ShopCoordinator: Coordinator {
             navigationController.pushViewController(viewController, animated: true)
         } else {
             // Show product customization
+            let viewModel = ProductCustomizationViewModel(selectedProduct: model, selectedOption: options[0])
+            let viewController = ProductCustomizationViewController(viewModel: viewModel)
+            viewController.coordinator = self
+            navigationController.pushViewController(viewController, animated: true)
         }
+    }
+    
+    func customizeProductOption(_ product: Product, option: Product.Option) {
+        let viewModel = ProductCustomizationViewModel(selectedProduct: product, selectedOption: option)
+        let viewController = ProductCustomizationViewController(viewModel: viewModel)
+        viewController.coordinator = self
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func dismiss(_ viewController: UIViewController, animated: Bool = true) {

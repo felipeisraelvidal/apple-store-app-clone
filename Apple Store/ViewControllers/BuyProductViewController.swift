@@ -105,6 +105,10 @@ extension BuyProductViewController: UITableViewDelegate, UITableViewDataSource {
             
             cell.configure(with: option)
             
+            cell.onTapSelectButton = { [unowned self] productOption in
+                self.coordinator?.customizeProductOption(viewModel.selectedProduct, option: productOption)
+            }
+            
             return cell
         default:
             return UITableViewCell()
@@ -162,7 +166,8 @@ struct BuyProductViewControllerPreviews: PreviewProvider {
                             "Two Thunderbolt / USB 4 ports"
                         ],
                         price: 999,
-                        availableFinishes: nil
+                        availableFinishes: nil,
+                        customizations: nil
                     ),
                     .init(
                         id: 0,
@@ -179,7 +184,8 @@ struct BuyProductViewControllerPreviews: PreviewProvider {
                             "Two Thunderbolt / USB 4 ports"
                         ],
                         price: 999,
-                        availableFinishes: nil
+                        availableFinishes: nil,
+                        customizations: nil
                     )
                 ]
             )

@@ -46,6 +46,92 @@
                         "name": "Silver",
                         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-silver-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000"
                     }
+                ],
+                "customizations": [
+                    {
+                        "id": 0,
+                        "name": "Memory",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "8GB unified memory",
+                                "price": 0,
+                                "price_change_method": "none"
+                            },
+                            {
+                                "id": 1,
+                                "name": "16GB unified memory",
+                                "price": 200,
+                                "price_change_method": "sum_base_price"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 1,
+                        "name": "Storage",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "256GB SSD storage",
+                                "price": 0,
+                                "price_change_method": "none"
+                            },
+                            {
+                                "id": 1,
+                                "name": "512GB SSD storage",
+                                "price": 200,
+                                "price_change_method": "sum_base_price"
+                            },
+                            {
+                                "id": 2,
+                                "name": "1TB SSD storage",
+                                "price": 400,
+                                "price_change_method": "sum_base_price"
+                            },
+                            {
+                                "id": 3,
+                                "name": "2TB SSD storage",
+                                "price": 800,
+                                "price_change_method": "sum_base_price"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "name": "Final Cut Pro",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "None",
+                                "price": 0,
+                                "price_change_method": "none"
+                            },
+                            {
+                                "id": 1,
+                                "name": "Final Cut Pro",
+                                "price": 299.99,
+                                "price_change_method": "sum_base_price"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "name": "Logic Pro",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "None",
+                                "price": 0,
+                                "price_change_method": "none"
+                            },
+                            {
+                                "id": 1,
+                                "name": "Logic Pro",
+                                "price": 199.99,
+                                "price_change_method": "sum_base_price"
+                            }
+                        ]
+                    }
                 ]
             },
             {
@@ -78,6 +164,86 @@
                         "raw_value": "silver",
                         "name": "Silver",
                         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-silver-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000"
+                    }
+                ],
+                "customizations": [
+                    {
+                        "id": 0,
+                        "name": "Memory",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "8GB unified memory",
+                                "price": 0,
+                                "price_change_method": "none"
+                            },
+                            {
+                                "id": 1,
+                                "name": "16GB unified memory",
+                                "price": 200,
+                                "price_change_method": "sum_base_price"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 1,
+                        "name": "Storage",
+                        "options": [
+                            {
+                                "id": 1,
+                                "name": "512GB SSD storage",
+                                "price": 0,
+                                "price_change_method": "none"
+                            },
+                            {
+                                "id": 2,
+                                "name": "1TB SSD storage",
+                                "price": 200,
+                                "price_change_method": "sum_base_price"
+                            },
+                            {
+                                "id": 3,
+                                "name": "2TB SSD storage",
+                                "price": 600,
+                                "price_change_method": "sum_base_price"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "name": "Final Cut Pro",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "None",
+                                "price": 0,
+                                "price_change_method": "none"
+                            },
+                            {
+                                "id": 1,
+                                "name": "Final Cut Pro",
+                                "price": 299.99,
+                                "price_change_method": "sum_base_price"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "name": "Logic Pro",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "None",
+                                "price": 0,
+                                "price_change_method": "none"
+                            },
+                            {
+                                "id": 1,
+                                "name": "Logic Pro",
+                                "price": 199.99,
+                                "price_change_method": "sum_base_price"
+                            }
+                        ]
                     }
                 ]
             }
@@ -666,6 +832,13 @@
         "model": "Pro Display XDR",
         "name": "Pro Display XDR",
         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-mac-pro-display-202108?wid=800&hei=1000&fmt=jpeg&qlt=80&.v=1625864626000",
+        "options": [
+            {
+                "id": 0,
+                "name": "Pro Display XDR",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/pro-display-hero?wid=820&hei=474&fmt=jpeg&qlt=80&.v=1572384750703"
+            },
+        ],
         "starting_price": 4999
     },
     {

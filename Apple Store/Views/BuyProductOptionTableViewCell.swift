@@ -13,6 +13,8 @@ class BuyProductOptionTableViewCell: UITableViewCell {
     
     private var productOption: Product.Option!
     
+    var onTapSelectButton: ((Product.Option) -> Void)?
+    
     private let productImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -84,6 +86,7 @@ class BuyProductOptionTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        selectButton.addTarget(self, action: #selector(selectButtonTapped(_:)), for: .touchUpInside)
         contentView.addSubview(selectButton)
         NSLayoutConstraint.activate([
             selectButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
@@ -164,6 +167,10 @@ class BuyProductOptionTableViewCell: UITableViewCell {
     @objc private func finishSegmentedControlChanged(_ sender: UISegmentedControl) {
         guard let finish = productOption.availableFinishes?[sender.selectedSegmentIndex], let urlString = finish.imageURL else { return }
         productImageView.sd_setImage(with: URL(string: urlString), completed: nil)
+    }
+    
+    @objc private func selectButtonTapped(_ sender: UIButton) {
+        onTapSelectButton?(productOption)
     }
 
 }
