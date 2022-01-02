@@ -54,9 +54,7 @@
                         "options": [
                             {
                                 "id": 0,
-                                "name": "8GB unified memory",
-                                "price": 0,
-                                "price_change_method": "none"
+                                "name": "8GB unified memory"
                             },
                             {
                                 "id": 1,
@@ -64,7 +62,8 @@
                                 "price": 200,
                                 "price_change_method": "sum_base_price"
                             }
-                        ]
+                        ],
+                        "price_change_method": "sum_base_price"
                     },
                     {
                         "id": 1,
@@ -72,9 +71,7 @@
                         "options": [
                             {
                                 "id": 0,
-                                "name": "256GB SSD storage",
-                                "price": 0,
-                                "price_change_method": "none"
+                                "name": "256GB SSD storage"
                             },
                             {
                                 "id": 1,
@@ -94,7 +91,8 @@
                                 "price": 800,
                                 "price_change_method": "sum_base_price"
                             }
-                        ]
+                        ],
+                        "price_change_method": "sum_base_price"
                     },
                     {
                         "id": 2,
@@ -102,9 +100,7 @@
                         "options": [
                             {
                                 "id": 0,
-                                "name": "None",
-                                "price": 0,
-                                "price_change_method": "none"
+                                "name": "None"
                             },
                             {
                                 "id": 1,
@@ -112,7 +108,8 @@
                                 "price": 299.99,
                                 "price_change_method": "sum_base_price"
                             }
-                        ]
+                        ],
+                        "price_change_method": "sum_base_price"
                     },
                     {
                         "id": 3,
@@ -121,8 +118,6 @@
                             {
                                 "id": 0,
                                 "name": "None",
-                                "price": 0,
-                                "price_change_method": "none"
                             },
                             {
                                 "id": 1,
@@ -130,7 +125,8 @@
                                 "price": 199.99,
                                 "price_change_method": "sum_base_price"
                             }
-                        ]
+                        ],
+                        "price_change_method": "sum_base_price"
                     }
                 ]
             },
@@ -856,6 +852,105 @@
             "silver",
             "gold",
             "graphite"
+        ],
+        "options": [
+            {
+                "id": 0,
+                "name": "iPhone 13 Pro",
+                "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-family-select?wid=1880&amp;hei=2224&amp;fmt=jpeg&amp;qlt=80&amp;.v=1631306948000",
+                "price": 999,
+                "available_finishes": [
+                    {
+                        "raw_value": "sierra_blue",
+                        "name": "Sierra Blue",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-blue-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652955000"
+                    },
+                    {
+                        "raw_value": "silver",
+                        "name": "Silver",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-silver-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652956000"
+                    },
+                    {
+                        "raw_value": "gold",
+                        "name": "Gold",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652956000"
+                    },
+                    {
+                        "raw_value": "graphite",
+                        "name": "Graphite",
+                        "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-graphite-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652956000"
+                    }
+                ],
+                "customizations": [
+                    {
+                        "id": 0,
+                        "name": "Model",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "iPhone 13 Pro",
+                                "price": 999
+                            },
+                            {
+                                "id": 1,
+                                "name": "iPhone 13 Pro Max",
+                                "price": 1099
+                            }
+                        ],
+                        "price_change_method": "change_base_price"
+                    },
+                    {
+                        "id": 1,
+                        "name": "Finish",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "Sierra Blue"
+                            },
+                            {
+                                "id": 1,
+                                "name": "Silver"
+                            },
+                            {
+                                "id": 2,
+                                "name": "Gold"
+                            },
+                            {
+                                "id": 3,
+                                "name": "Graphite"
+                            }
+                        ],
+                        "price_change_method": "none"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Capacity",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "128GB"
+                            },
+                            {
+                                "id": 1,
+                                "name": "256GB",
+                                "price": 100,
+                                "price_change_method": "sum_base_price"
+                            },
+                            {
+                                "id": 2,
+                                "name": "512GB",
+                                "price": 300
+                            },
+                            {
+                                "id": 3,
+                                "name": "1TB",
+                                "price": 500
+                            }
+                        ],
+                        "price_change_method": "sum_base_price"
+                    }
+                ]
+            }
         ],
         "starting_price": 999
     },

@@ -63,34 +63,44 @@ extension Product {
         }
     }
     
-    struct Customization: Codable {
+    struct Customization: Codable, Equatable, Hashable {
         let id: Int
         let name: String
         let options: [Option]
+        let priceChangeMethod: PriceChangeMethod?
         
         enum CodingKeys: String, CodingKey {
             case id
             case name
             case options
+            case priceChangeMethod = "price_change_method"
+        }
+        
+        static func == (lhs: Product.Customization, rhs: Product.Customization) -> Bool {
+            lhs.id == rhs.id
+        }
+        
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+            hasher.combine(name)
+            hasher.combine(priceChangeMethod)
         }
         
         enum PriceChangeMethod: String, Codable {
-            case none = "none"
+            case doNothing = "none"
             case sumBasePrice = "sum_base_price"
-            case change_base_price = "change_base_price"
+            case changeBasePrice = "change_base_price"
         }
         
-        struct Option: Codable {
+        struct Option: Codable, Equatable {
             let id: Int
             let name: String
-            let price: Double
-            let priceChangeMethod: PriceChangeMethod?
+            let price: Double?
             
             enum CodingKeys: String, CodingKey {
                 case id
                 case name
                 case price
-                case priceChangeMethod = "price_change_method"
             }
         }
     }

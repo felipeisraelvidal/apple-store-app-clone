@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class ProductCustomizationViewController: UIViewController {
     
@@ -69,6 +70,14 @@ class ProductCustomizationViewController: UIViewController {
         return view
     }()
     
+    private let finalPriceLabel: UILabel = {
+        let label = UILabel()
+        label.font = .preferredFont(for: .body, weight: .bold)
+        label.adjustsFontForContentSizeCategory = true
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     init(viewModel: ProductCustomizationViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -76,6 +85,12 @@ class ProductCustomizationViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError()
+    }
+    
+    var cancellable = Set<AnyCancellable>()
+    
+    deinit {
+        print("\(String(describing: self)) is being deinitialized")
     }
 
     override func viewDidLoad() {
@@ -88,10 +103,19 @@ class ProductCustomizationViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        addToCartButton.addTarget(self, action: #selector(addToCartButtonTapped(_:)), for: .touchUpInside)
+        
         var frame: CGRect = .zero
         frame.size.height = .leastNormalMagnitude
         let headerView = UIView(frame: frame)
         tableView.tableHeaderView = headerView
+        
+        viewModel.$finalPrice
+            .map { price in
+                return "\(price)"
+            }
+            .assign(to: \.text, on: finalPriceLabel)
+            .store(in: &cancellable)
     }
     
     override func viewDidLayoutSubviews() {
@@ -130,10 +154,18 @@ class ProductCustomizationViewController: UIViewController {
             bottomViewTopSeparator.heightAnchor.constraint(equalToConstant: 0.5)
         ])
         
+        bottomView.contentView.addSubview(finalPriceLabel)
+        
+        NSLayoutConstraint.activate([
+            finalPriceLabel.topAnchor.constraint(equalTo: bottomView.contentView.topAnchor, constant: 10),
+            finalPriceLabel.leadingAnchor.constraint(equalTo: bottomView.contentView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            finalPriceLabel.trailingAnchor.constraint(equalTo: bottomView.contentView.safeAreaLayoutGuide.trailingAnchor, constant: -16)
+        ])
+        
         bottomView.contentView.addSubview(addToCartButton)
         
         NSLayoutConstraint.activate([
-            addToCartButton.topAnchor.constraint(equalTo: bottomView.contentView.topAnchor, constant: 10),
+            addToCartButton.topAnchor.constraint(equalTo: finalPriceLabel.bottomAnchor, constant: 12),
             addToCartButton.leadingAnchor.constraint(equalTo: bottomView.contentView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             addToCartButton.trailingAnchor.constraint(equalTo: bottomView.contentView.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             addToCartButton.bottomAnchor.constraint(equalTo: bottomView.contentView.bottomAnchor, constant: -10)
@@ -143,6 +175,12 @@ class ProductCustomizationViewController: UIViewController {
     
     private func configureNavigationBar() {
         navigationItem.largeTitleDisplayMode = .never
+    }
+    
+    // MARK: - Actions
+    
+    @objc private func addToCartButtonTapped(_ sender: UIButton) {
+        
     }
     
 }
@@ -189,11 +227,23 @@ extension ProductCustomizationViewController: UITableViewDataSource, UITableView
                 return UITableViewCell()
             }
             
-            guard let option = viewModel.selectedOption.customizations?[indexPath.section - 1].options[indexPath.row] else {
+            guard let customization = viewModel.selectedOption.customizations?[indexPath.section - 1] else {
                 return UITableViewCell()
             }
             
-            cell.configure(with: option)
+            let option = customization.options[indexPath.row]
+            
+            cell.configure(with: option, priceChangeMethod: customization.priceChangeMethod!)
+            
+            if let selected = viewModel.options[customization] {
+                if selected == option {
+                    tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+                }
+            } else {
+                if indexPath.row == 0 {
+                    tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+                }
+            }
             
             return cell
         }
@@ -201,7 +251,7 @@ extension ProductCustomizationViewController: UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         for ip in tableView.indexPathsForSelectedRows ?? [] {
-            if ip.section == indexPath.section && ip.row != indexPath.row {
+            if ip.section == indexPath.section {
                 tableView.deselectRow(at: ip, animated: true)
             }
         }
@@ -217,6 +267,14 @@ extension ProductCustomizationViewController: UITableViewDataSource, UITableView
             headerView.textLabel?.text = customization.name.capitalized
             headerView.textLabel?.textColor = .label
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let customization = viewModel.selectedOption.customizations?[indexPath.section - 1] else { return }
+
+        let option = customization.options[indexPath.row]
+
+        viewModel.addCustomization(customization, option: option)
     }
     
 }
@@ -277,16 +335,15 @@ struct ProductCustomizationViewControllerPreviews: PreviewProvider {
                         .init(
                             id: 0,
                             name: "Item 1",
-                            price: 0,
-                            priceChangeMethod: Product.Customization.PriceChangeMethod.none
+                            price: 0
                         ),
                         .init(
                             id: 1,
                             name: "Item 2",
-                            price: 200,
-                            priceChangeMethod: .sumBasePrice
+                            price: 200
                         )
-                    ]
+                    ],
+                    priceChangeMethod: .sumBasePrice
                 ),
                 .init(
                     id: 1,
@@ -295,22 +352,20 @@ struct ProductCustomizationViewControllerPreviews: PreviewProvider {
                         .init(
                             id: 0,
                             name: "Item 1",
-                            price: 0,
-                            priceChangeMethod: Product.Customization.PriceChangeMethod.none
+                            price: 0
                         ),
                         .init(
                             id: 1,
                             name: "Item 2",
-                            price: 200,
-                            priceChangeMethod: .sumBasePrice
+                            price: 200
                         ),
                         .init(
                             id: 2,
                             name: "Item 3",
-                            price: 400,
-                            priceChangeMethod: .sumBasePrice
+                            price: 400
                         )
-                    ]
+                    ],
+                    priceChangeMethod: .sumBasePrice
                 )
             ]
         )

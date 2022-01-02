@@ -66,19 +66,19 @@ class CustomizationOptionTableViewCell: UITableViewCell {
         
     }
     
-    func configure(with model: Product.Customization.Option) {
+    func configure(with model: Product.Customization.Option, priceChangeMethod: Product.Customization.PriceChangeMethod) {
         nameLabel.text = model.name
         
-        switch model.priceChangeMethod {
+        switch priceChangeMethod {
         case .sumBasePrice:
-            priceLabel.text = "[+ $\(model.price)]"
-        case .change_base_price:
-            priceLabel.text = "Starts with $\(model.price)"
+            priceLabel.text = "[+ $\(model.price ?? 0)]"
+        case .changeBasePrice:
+            priceLabel.text = "Starts with $\(model.price ?? 0)"
         default:
             break
         }
         
-        if model.price == 0 {
+        if model.price == nil {
             labelsStackView.removeArrangedSubview(priceLabel)
             priceLabel.removeFromSuperview()
         }
