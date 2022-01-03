@@ -67,7 +67,7 @@ extension Product {
         let id: Int
         let name: String
         let options: [Option]
-        let priceChangeMethod: PriceChangeMethod?
+        let priceChangeMethod: PriceChangeMethod
         
         enum CodingKeys: String, CodingKey {
             case id

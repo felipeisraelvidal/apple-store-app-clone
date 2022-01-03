@@ -59,8 +59,7 @@
                             {
                                 "id": 1,
                                 "name": "16GB unified memory",
-                                "price": 200,
-                                "price_change_method": "sum_base_price"
+                                "price": 200
                             }
                         ],
                         "price_change_method": "sum_base_price"
@@ -76,20 +75,17 @@
                             {
                                 "id": 1,
                                 "name": "512GB SSD storage",
-                                "price": 200,
-                                "price_change_method": "sum_base_price"
+                                "price": 200
                             },
                             {
                                 "id": 2,
                                 "name": "1TB SSD storage",
-                                "price": 400,
-                                "price_change_method": "sum_base_price"
+                                "price": 400
                             },
                             {
                                 "id": 3,
                                 "name": "2TB SSD storage",
-                                "price": 800,
-                                "price_change_method": "sum_base_price"
+                                "price": 800
                             }
                         ],
                         "price_change_method": "sum_base_price"
@@ -105,8 +101,7 @@
                             {
                                 "id": 1,
                                 "name": "Final Cut Pro",
-                                "price": 299.99,
-                                "price_change_method": "sum_base_price"
+                                "price": 299.99
                             }
                         ],
                         "price_change_method": "sum_base_price"
@@ -122,8 +117,7 @@
                             {
                                 "id": 1,
                                 "name": "Logic Pro",
-                                "price": 199.99,
-                                "price_change_method": "sum_base_price"
+                                "price": 199.99
                             }
                         ],
                         "price_change_method": "sum_base_price"
@@ -169,17 +163,15 @@
                         "options": [
                             {
                                 "id": 0,
-                                "name": "8GB unified memory",
-                                "price": 0,
-                                "price_change_method": "none"
+                                "name": "8GB unified memory"
                             },
                             {
                                 "id": 1,
                                 "name": "16GB unified memory",
-                                "price": 200,
-                                "price_change_method": "sum_base_price"
+                                "price": 200
                             }
-                        ]
+                        ],
+                        "price_change_method": "sum_base_price"
                     },
                     {
                         "id": 1,
@@ -188,22 +180,19 @@
                             {
                                 "id": 1,
                                 "name": "512GB SSD storage",
-                                "price": 0,
-                                "price_change_method": "none"
                             },
                             {
                                 "id": 2,
                                 "name": "1TB SSD storage",
-                                "price": 200,
-                                "price_change_method": "sum_base_price"
+                                "price": 200
                             },
                             {
                                 "id": 3,
                                 "name": "2TB SSD storage",
-                                "price": 600,
-                                "price_change_method": "sum_base_price"
+                                "price": 600
                             }
-                        ]
+                        ],
+                        "price_change_method": "sum_base_price"
                     },
                     {
                         "id": 2,
@@ -211,17 +200,15 @@
                         "options": [
                             {
                                 "id": 0,
-                                "name": "None",
-                                "price": 0,
-                                "price_change_method": "none"
+                                "name": "None"
                             },
                             {
                                 "id": 1,
                                 "name": "Final Cut Pro",
-                                "price": 299.99,
-                                "price_change_method": "sum_base_price"
+                                "price": 299.99
                             }
-                        ]
+                        ],
+                        "price_change_method": "sum_base_price"
                     },
                     {
                         "id": 3,
@@ -229,17 +216,15 @@
                         "options": [
                             {
                                 "id": 0,
-                                "name": "None",
-                                "price": 0,
-                                "price_change_method": "none"
+                                "name": "None"
                             },
                             {
                                 "id": 1,
                                 "name": "Logic Pro",
-                                "price": 199.99,
-                                "price_change_method": "sum_base_price"
+                                "price": 199.99
                             }
-                        ]
+                        ],
+                        "price_change_method": "sum_base_price"
                     }
                 ]
             }
@@ -287,6 +272,82 @@
                         "name": "Silver",
                         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-silver-select-202011_GEO_US?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632950226000"
                     }
+                ],
+                "customizations": [
+                    {
+                        "id": 0,
+                        "name": "Memory",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "8GB unified memory"
+                            },
+                            {
+                                "id": 1,
+                                "name": "16GB unified memory",
+                                "price": 200
+                            }
+                        ],
+                        "price_change_method": "sum_base_price"
+                    },
+                    {
+                        "id": 1,
+                        "name": "Storage",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "256GB SSD storage"
+                            },
+                            {
+                                "id": 1,
+                                "name": "512GB SSD storage",
+                                "price": 200
+                            },
+                            {
+                                "id": 2,
+                                "name": "1TB SSD storage",
+                                "price": 400
+                            },
+                            {
+                                "id": 3,
+                                "name": "2TB SSD storage",
+                                "price": 800
+                            }
+                        ],
+                        "price_change_method": "sum_base_price"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Final Cut Pro",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "None"
+                            },
+                            {
+                                "id": 1,
+                                "name": "Final Cut Pro",
+                                "price": 299.99
+                            }
+                        ],
+                        "price_change_method": "sum_base_price"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Logic Pro",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "None",
+                            },
+                            {
+                                "id": 1,
+                                "name": "Logic Pro",
+                                "price": 199.99
+                            }
+                        ],
+                        "price_change_method": "sum_base_price"
+                    }
                 ]
             },
             {
@@ -314,6 +375,77 @@
                         "raw_value": "silver",
                         "name": "Silver",
                         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-silver-select-202011_GEO_US?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632950226000"
+                    }
+                ],
+                "customizations": [
+                    {
+                        "id": 0,
+                        "name": "Memory",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "8GB unified memory"
+                            },
+                            {
+                                "id": 1,
+                                "name": "16GB unified memory",
+                                "price": 200
+                            }
+                        ],
+                        "price_change_method": "sum_base_price"
+                    },
+                    {
+                        "id": 1,
+                        "name": "Storage",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "512GB SSD storage"
+                            },
+                            {
+                                "id": 2,
+                                "name": "1TB SSD storage",
+                                "price": 200
+                            },
+                            {
+                                "id": 3,
+                                "name": "2TB SSD storage",
+                                "price": 600
+                            }
+                        ],
+                        "price_change_method": "sum_base_price"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Final Cut Pro",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "None"
+                            },
+                            {
+                                "id": 1,
+                                "name": "Final Cut Pro",
+                                "price": 299.99
+                            }
+                        ],
+                        "price_change_method": "sum_base_price"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Logic Pro",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "None",
+                            },
+                            {
+                                "id": 1,
+                                "name": "Logic Pro",
+                                "price": 199.99
+                            }
+                        ],
+                        "price_change_method": "sum_base_price"
                     }
                 ]
             }
@@ -358,6 +490,121 @@
                         "raw_value": "silver",
                         "name": "Silver",
                         "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-silver-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788573000"
+                    }
+                ],
+                "customizations": [
+                    {
+                        "id": 0,
+                        "name": "System on a Chip (Processor)",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "Apple M1 Pro with 8-core CPU, 14-core GPU, 16-core Neural Engine"
+                            },
+                            {
+                                "id": 1,
+                                "name": "Apple M1 Pro with 10-core CPU, 14-core GPU, 16-core Neural Engine",
+                                "price": 200
+                            },
+                            {
+                                "id": 2,
+                                "name": "Apple M1 Pro with 10-core CPU, 16-core GPU, 16-core Neural Engine",
+                                "price": 300
+                            },
+                            {
+                                "id": 3,
+                                "name": "Apple M1 Max with 10-core CPU, 24-core GPU, 16-core Neural Engine",
+                                "price": 500
+                            },
+                            {
+                                "id": 4,
+                                "name": "Apple M1 Max with 10-core CPU, 32-core GPU, 16-core Neural Engine",
+                                "price": 700
+                            }
+                        ],
+                        "price_change_method": "sum_base_price"
+                    },
+                    {
+                        "id": 1,
+                        "name": "Memory",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "16GB unified memory",
+                                "depends_on": [
+                                    
+                                ]
+                            },
+                            {
+                                "id": 1,
+                                "name": "32GB unified memory",
+                                "price": 400
+                            },
+                            {
+                                "id": 1,
+                                "name": "64GB unified memory",
+                                "price": 800
+                            }
+                        ],
+                        "price_change_method": "sum_base_price"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Storage",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "256GB SSD storage"
+                            },
+                            {
+                                "id": 1,
+                                "name": "512GB SSD storage",
+                                "price": 200
+                            },
+                            {
+                                "id": 2,
+                                "name": "1TB SSD storage",
+                                "price": 400
+                            },
+                            {
+                                "id": 3,
+                                "name": "2TB SSD storage",
+                                "price": 800
+                            }
+                        ],
+                        "price_change_method": "sum_base_price"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Final Cut Pro",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "None"
+                            },
+                            {
+                                "id": 1,
+                                "name": "Final Cut Pro",
+                                "price": 299.99
+                            }
+                        ],
+                        "price_change_method": "sum_base_price"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Logic Pro",
+                        "options": [
+                            {
+                                "id": 0,
+                                "name": "None",
+                            },
+                            {
+                                "id": 1,
+                                "name": "Logic Pro",
+                                "price": 199.99
+                            }
+                        ],
+                        "price_change_method": "sum_base_price"
                     }
                 ]
             },

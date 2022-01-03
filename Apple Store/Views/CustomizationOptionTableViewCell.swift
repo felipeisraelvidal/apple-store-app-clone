@@ -15,6 +15,7 @@ class CustomizationOptionTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = .preferredFont(for: .body, weight: .semibold)
         label.textColor = .label
+        label.numberOfLines = 0
         return label
     }()
     

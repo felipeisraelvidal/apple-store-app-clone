@@ -233,7 +233,7 @@ extension ProductCustomizationViewController: UITableViewDataSource, UITableView
             
             let option = customization.options[indexPath.row]
             
-            cell.configure(with: option, priceChangeMethod: customization.priceChangeMethod!)
+            cell.configure(with: option, priceChangeMethod: customization.priceChangeMethod)
             
             if let selected = viewModel.options[customization] {
                 if selected == option {
