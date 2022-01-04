@@ -135,7 +135,10 @@ struct ProductDetailsViewControllerPreviews: PreviewProvider {
         func makeUIViewController(context: Context) -> UIViewControllerType {
             let product = Product(
                 id: 0,
-                model: "MacBook Pro",
+                model: ProductModel(
+                    id: 1,
+                    name: "MacBook Pro"
+                ),
                 name: "MacBook Pro 16\"",
                 imageURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-pro-16-202110?wid=1200&hei=1000&fmt=p-jpg&qlt=95&.v=1633726244000",
                 availableColors: [
@@ -148,8 +151,7 @@ struct ProductDetailsViewControllerPreviews: PreviewProvider {
                     id: 0,
                     name: "Mac",
                     imageURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
-                ),
-                options: nil
+                )
             )
             let viewModel = ProductDetailsViewModel(selectedProduct: product)
             let viewController = ProductDetailsViewController(viewModel: viewModel)

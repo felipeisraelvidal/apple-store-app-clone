@@ -33,25 +33,30 @@ class ShopCoordinator: Coordinator {
     }
     
     func buyProduct(_ model: Product) {
-        guard let options = model.options, !options.isEmpty else {
-            print("This product has no options")
-            return
-        }
+//        guard let options = model.options, !options.isEmpty else {
+//            print("This product has no options")
+//            return
+//        }
+//
+//        if options.count > 1 {
+//            // Show options selector
+//
+//            let viewModel = BuyProductViewModel(selectedProduct: model)
+//            let viewController = BuyProductViewController(viewModel: viewModel)
+//            viewController.coordinator = self
+//            navigationController.pushViewController(viewController, animated: true)
+//        } else {
+//            // Show product customization
+//            let viewModel = ProductCustomizationViewModel(selectedProduct: model, selectedOption: options[0])
+//            let viewController = ProductCustomizationViewController(viewModel: viewModel)
+//            viewController.coordinator = self
+//            navigationController.pushViewController(viewController, animated: true)
+//        }
         
-        if options.count > 1 {
-            // Show options selector
-            
-            let viewModel = BuyProductViewModel(selectedProduct: model)
-            let viewController = BuyProductViewController(viewModel: viewModel)
-            viewController.coordinator = self
-            navigationController.pushViewController(viewController, animated: true)
-        } else {
-            // Show product customization
-            let viewModel = ProductCustomizationViewModel(selectedProduct: model, selectedOption: options[0])
-            let viewController = ProductCustomizationViewController(viewModel: viewModel)
-            viewController.coordinator = self
-            navigationController.pushViewController(viewController, animated: true)
-        }
+        let viewModel = BuyProductViewModel(selectedProduct: model)
+        let viewController = BuyProductViewController(viewModel: viewModel)
+        viewController.coordinator = self
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func customizeProductOption(_ product: Product, option: Product.Option) {

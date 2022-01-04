@@ -9,13 +9,12 @@ import Foundation
 
 struct Product: Codable {
     let id: Int
-    let model: String?
+    let model: ProductModel
     let name: String
     let imageURL: String?
     let availableColors: [String]?
     let startingPrice: Double
     let family: ProductFamily?
-    let options: [Option]?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -25,7 +24,6 @@ struct Product: Codable {
         case availableColors = "available_colors"
         case startingPrice = "starting_price"
         case family
-        case options
     }
 }
 

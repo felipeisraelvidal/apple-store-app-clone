@@ -6,20 +6,28 @@
 //
 
 import Foundation
+import Combine
 
 final class ShopViewModel {
     
     @Published private(set) var families: [ProductFamily] = []
+    @Published private(set) var isLoading = false
+    
+    private var anyCancelable = Set<AnyCancellable>()
     
     func fetchFamilies() {
-        NetworkManager.shared.getFamilies { result in
-            switch result {
-            case .success(let families):
+        families = []
+        isLoading = true
+        
+        NetworkManager.shared.getFamilies()
+            .receive(on: DispatchQueue.main)
+            .map({ $0 })
+            .sink { [weak self] _ in
+                self?.isLoading = false
+            } receiveValue: { [unowned self] families in
                 self.families = families
-            case .failure(let error):
-                print(error.localizedDescription)
             }
-        }
+            .store(in: &self.anyCancelable)
     }
     
 }

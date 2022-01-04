@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Combine
 
 class BuyProductViewController: UIViewController {
     
     weak var coordinator: ShopCoordinator?
     
+    private var anyCancellable = Set<AnyCancellable>()
     private var viewModel: BuyProductViewModel
     
     private let tableView: UITableView = {
@@ -23,6 +25,16 @@ class BuyProductViewController: UIViewController {
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
+    }()
+    
+    private let loadingLabel: UILabel = {
+        let label = UILabel()
+        label.font = .preferredFont(for: .title3, weight: .semibold)
+        label.textColor = .secondaryLabel
+        label.text = "Loading Product"
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
     }()
     
     init(viewModel: BuyProductViewModel) {
@@ -46,6 +58,22 @@ class BuyProductViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        viewModel.$productOptions
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] test in
+                self?.tableView.reloadData()
+            }
+            .store(in: &anyCancellable)
+        
+        viewModel.$isLoading
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] value in
+                self?.tableView.backgroundView = value == true ? self?.loadingLabel : nil
+            }
+            .store(in: &self.anyCancellable)
+        
+        fetchProductOptions()
     }
     
     override func loadView() {
@@ -64,6 +92,10 @@ class BuyProductViewController: UIViewController {
     private func configureNavigationBar() {
         navigationItem.largeTitleDisplayMode = .never
     }
+    
+    @objc private func fetchProductOptions() {
+        viewModel.fetchProductOptions()
+    }
 
 }
 
@@ -78,7 +110,7 @@ extension BuyProductViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 1
         case 1:
-            return viewModel.selectedProduct.options?.count ?? 0
+            return viewModel.productOptions.count
         default:
             return 0
         }
@@ -91,7 +123,7 @@ extension BuyProductViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             
-            cell.titleLabel.text = "Choose you new \(viewModel.selectedProduct.model ?? "Model")"
+            cell.titleLabel.text = "Choose you new \(viewModel.selectedProduct.model.name)"
             
             return cell
         case 1:
@@ -99,10 +131,7 @@ extension BuyProductViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             
-            guard let option = viewModel.selectedProduct.options?[indexPath.row] else {
-                return UITableViewCell()
-            }
-            
+            let option = viewModel.productOptions[indexPath.row]
             cell.configure(with: option)
             
             cell.onTapSelectButton = { [unowned self] productOption in
@@ -131,70 +160,35 @@ struct BuyProductViewControllerPreviews: PreviewProvider {
     }
     
     struct ContainerPreview: UIViewControllerRepresentable {
-        typealias UIViewControllerType = UINavigationController
+        typealias UIViewControllerType = UITabBarController
         
         func makeUIViewController(context: Context) -> UIViewControllerType {
             let product = Product(
-                id: 0,
-                model: "MacBook Pro",
-                name: "MacBook Pro 16\"",
-                imageURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-pro-16-202110?wid=1200&hei=1000&fmt=p-jpg&qlt=95&.v=1633726244000",
-                availableColors: [
-                    "space_gray",
-                    "gold",
-                    "silver"
-                ],
-                startingPrice: 2499,
+                id: 1,
+                model: ProductModel(
+                    id: 1,
+                    name: "MacBook Air"
+                ),
+                name: "MacBook Air",
+                imageURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-air-202110?wid=1200&hei=1000&fmt=p-jpg&qlt=95&.v=1633726242000",
+                availableColors: nil,
+                startingPrice: 999,
                 family: .init(
                     id: 0,
                     name: "Mac",
                     imageURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-mac-nav-202110?wid=400&hei=260&fmt=png-alpha&.v=1632870674000"
-                ),
-                options: [
-                    .init(
-                        id: 0,
-                        name: "Apple M1 Chip with 8-Core CPU and 7-Core GPU 256GB Storage",
-                        imageURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000",
-                        specs: [
-                            "Apple M1 chip with 8‑core CPU, 7‑core GPU, and 16‑core Neural Engine",
-                            "8GB unified memory",
-                            "256GB SSD storage",
-                            "Retina display with True Tone",
-                            "Magic Keyboard",
-                            "Touch ID",
-                            "Force Touch trackpad",
-                            "Two Thunderbolt / USB 4 ports"
-                        ],
-                        price: 999,
-                        availableFinishes: nil,
-                        customizations: nil
-                    ),
-                    .init(
-                        id: 0,
-                        name: "Apple M1 Chip with 8-Core CPU and 7-Core GPU 256GB Storage",
-                        imageURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000",
-                        specs: [
-                            "Apple M1 chip with 8‑core CPU, 7‑core GPU, and 16‑core Neural Engine",
-                            "8GB unified memory",
-                            "256GB SSD storage",
-                            "Retina display with True Tone",
-                            "Magic Keyboard",
-                            "Touch ID",
-                            "Force Touch trackpad",
-                            "Two Thunderbolt / USB 4 ports"
-                        ],
-                        price: 999,
-                        availableFinishes: nil,
-                        customizations: nil
-                    )
-                ]
+                )
             )
             
             let viewModel = BuyProductViewModel(selectedProduct: product)
             let viewController = BuyProductViewController(viewModel: viewModel)
             let navController = UINavigationController(rootViewController: viewController)
+            navController.tabBarItem = UITabBarItem(title: "Shop", image: UIImage(systemName: "laptopcomputer.and.iphone"), tag: 0)
             
-            return navController
+            let tabBarController = UITabBarController()
+            tabBarController.viewControllers = [navController]
+            
+            return tabBarController
         }
         
         func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}

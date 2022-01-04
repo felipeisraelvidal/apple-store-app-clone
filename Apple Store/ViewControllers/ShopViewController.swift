@@ -24,9 +24,20 @@ class ShopViewController: UIViewController {
         
         tableView.register(ShopProductFamilyCollectionTableViewCell.self, forCellReuseIdentifier: ShopProductFamilyCollectionTableViewCell.identifier)
         tableView.register(ShopProductFamilySectionHeader.self, forHeaderFooterViewReuseIdentifier: ShopProductFamilySectionHeader.identifier)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
+    }()
+    
+    private let loadingLabel: UILabel = {
+        let label = UILabel()
+        label.font = .preferredFont(for: .title3, weight: .semibold)
+        label.textColor = .secondaryLabel
+        label.text = "Loading Families"
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
     }()
     
     override func viewDidLoad() {
@@ -40,6 +51,20 @@ class ShopViewController: UIViewController {
         tableView.dataSource = self
         
         fetchFamilies()
+        
+        viewModel.$families
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] test in
+                self?.tableView.reloadData()
+            }
+            .store(in: &anyCancellable)
+        
+        viewModel.$isLoading
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] value in
+                self?.tableView.backgroundView = value == true ? self?.loadingLabel : nil
+            }
+            .store(in: &self.anyCancellable)
     }
     
     override func loadView() {
@@ -60,14 +85,8 @@ class ShopViewController: UIViewController {
         navigationController?.navigationItem.largeTitleDisplayMode = .always
     }
     
-    private func fetchFamilies() {
+    @objc private func fetchFamilies() {
         viewModel.fetchFamilies()
-        viewModel.$families
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] _ in
-                self?.tableView.reloadData()
-            }
-            .store(in: &anyCancellable)
     }
 
 }
@@ -80,14 +99,11 @@ extension ShopViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ShopProductFamilySectionHeader.identifier) as? ShopProductFamilySectionHeader else { return nil }
+
+        let family = viewModel.families[section]
         
-        viewModel.$families
-            .receive(on: DispatchQueue.main)
-            .sink { families in
-                headerView.configure(with: families[section])
-            }
-            .store(in: &anyCancellable)
-        
+        headerView.configure(with: family)
+
         return headerView
     }
     
@@ -99,22 +115,18 @@ extension ShopViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ShopProductFamilyCollectionTableViewCell.identifier, for: indexPath) as? ShopProductFamilyCollectionTableViewCell else {
             return UITableViewCell()
         }
-        
-        viewModel.$families
-            .receive(on: DispatchQueue.main)
-            .sink { families in
-                cell.configureCell(with: families[indexPath.section])
-            }
-            .store(in: &anyCancellable)
-        
+
+        let family = viewModel.families[indexPath.section]
+        cell.configureCell(with: family)
+
         cell.onSelectModel = { [weak self] model in
             self?.coordinator?.openProductDetails(model)
         }
-        
+
         cell.onTapBuyButton = { [weak self] model in
             self?.coordinator?.buyProduct(model)
         }
-        
+
         return cell
     }
     

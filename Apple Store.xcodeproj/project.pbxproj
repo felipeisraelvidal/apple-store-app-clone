@@ -41,6 +41,7 @@
 		55C31D11277D4FE4003FAA91 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C31D10277D4FE4003FAA91 /* ShopViewController.swift */; };
 		55C31D17277D5121003FAA91 /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C31D16277D5121003FAA91 /* ShopViewModel.swift */; };
 		55C31D19277D5180003FAA91 /* ProductFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C31D18277D5180003FAA91 /* ProductFamily.swift */; };
+		55CE23912783FB1C00CF614F /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE23902783FB1C00CF614F /* ProductModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		55C31D10277D4FE4003FAA91 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		55C31D16277D5121003FAA91 /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
 		55C31D18277D5180003FAA91 /* ProductFamily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFamily.swift; sourceTree = "<group>"; };
+		55CE23902783FB1C00CF614F /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 			children = (
 				55C31D18277D5180003FAA91 /* ProductFamily.swift */,
 				553789AD277D5E7600D2505B /* Product.swift */,
+				55CE23902783FB1C00CF614F /* ProductModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				553789B4277D634200D2505B /* ShopProductCollectionViewCell.swift in Sources */,
 				5573ED96277E6FE6007FA0D4 /* ProductDetailsViewModel.swift in Sources */,
 				5573ED98277E8AC6007FA0D4 /* BuyProductViewController.swift in Sources */,
+				55CE23912783FB1C00CF614F /* ProductModel.swift in Sources */,
 				55C31D0D277D4EF9003FAA91 /* MainTabBarController.swift in Sources */,
 				553789AC277D57D600D2505B /* ShopProductFamilyCollectionTableViewCell.swift in Sources */,
 				553789AE277D5E7600D2505B /* Product.swift in Sources */,
