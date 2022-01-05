@@ -36,7 +36,6 @@ extension Product {
         let specs: [String]?
         let price: Double?
         let availableFinishes: [Finish]?
-        let customizations: [Customization]?
         
         enum CodingKeys: String, CodingKey {
             case id
@@ -45,17 +44,16 @@ extension Product {
             case specs
             case price
             case availableFinishes = "available_finishes"
-            case customizations
         }
     }
     
     struct Finish: Codable {
-        let rawValue: String
+        let id: Int
         let name: String
         let imageURL: String?
         
         enum CodingKeys: String, CodingKey {
-            case rawValue = "raw_value"
+            case id
             case name
             case imageURL = "image_url"
         }
@@ -64,13 +62,13 @@ extension Product {
     struct Customization: Codable, Equatable, Hashable {
         let id: Int
         let name: String
-        let options: [Option]
+        let items: [Option]
         let priceChangeMethod: PriceChangeMethod
         
         enum CodingKeys: String, CodingKey {
             case id
             case name
-            case options
+            case items
             case priceChangeMethod = "price_change_method"
         }
         

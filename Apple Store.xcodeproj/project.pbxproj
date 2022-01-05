@@ -241,6 +241,7 @@
 				553789AF277D5EA300D2505B /* ProductFamilyViewModel.swift */,
 				5573ED95277E6FE6007FA0D4 /* ProductDetailsViewModel.swift */,
 				5573ED99277E8AD2007FA0D4 /* BuyProductViewModel.swift */,
+				557D3BB4277F841A002B6668 /* ProductCustomizationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -262,7 +263,6 @@
 				553789B3277D634200D2505B /* ShopProductCollectionViewCell.swift */,
 				5573ED9B277E9DB9007FA0D4 /* BuyProductOptionTableViewCell.swift */,
 				5573ED9D277EA924007FA0D4 /* BuyProductTitleTableViewCell.swift */,
-				557D3BB4277F841A002B6668 /* ProductCustomizationViewModel.swift */,
 				557D3BB6277F97ED002B6668 /* CustomizationOptionTableViewCell.swift */,
 				557D3BB8277F9E5A002B6668 /* ProductCustomizationHeroTableViewCell.swift */,
 			);

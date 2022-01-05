@@ -13,23 +13,16 @@ final class ProductCustomizationViewModel {
     private(set) var selectedProduct: Product
     private(set) var selectedOption: Product.Option
     
-//    @Published private var basePrice: Double
-//    @Published private var additionalPrice: Double = 0
+    @Published private(set) var customizations: [Product.Customization] = []
+    @Published private(set) var isLoading = false
+    
+    private var anyCancelable = Set<AnyCancellable>()
     
     @Published private(set) var finalPrice: Double
     
     @Published var options: [Product.Customization: Product.Customization.Option?] = [:]
     
-//    var finalPricePublisher: AnyPublisher<Double, Never> {
-//        return Publishers.CombineLatest($basePrice, $additionalPrice)
-//            .receive(on: DispatchQueue.main)
-//            .map { basePrice, additionalPrice in
-//                return basePrice + additionalPrice
-//            }
-//            .eraseToAnyPublisher()
-//    }
-    
-    var testPublisher: AnyPublisher<Double, Never> {
+    var finalPricePublisher: AnyPublisher<Double, Never> {
         return $options
             .receive(on: DispatchQueue.main)
             .map { [weak self] dict in
@@ -62,43 +55,31 @@ final class ProductCustomizationViewModel {
 //        self.basePrice = selectedOption.price ?? 0
         self.finalPrice = selectedOption.price ?? 0
         
-        finalPriceSubscriber = testPublisher
+        finalPriceSubscriber = finalPricePublisher
             .receive(on: DispatchQueue.main)
             .assign(to: \.finalPrice, on: self)
         
-        for customization in selectedOption.customizations ?? [] {
-            options[customization] = customization.options.first
-        }
+//        for customization in selectedOption.customizations ?? [] {
+//            options[customization] = customization.items.first
+//        }
+    }
+    
+    func fetchProductOptionCustomizations() {
+        self.isLoading = true
+        
+        NetworkManager.shared.getProductOptionCustomizations(productId: selectedProduct.id, optionId: selectedOption.id)
+            .receive(on: DispatchQueue.main)
+            .map({ $0 })
+            .sink { [weak self] _ in
+                self?.isLoading = false
+            } receiveValue: { [unowned self] customizations in
+                self.customizations = customizations
+            }
+            .store(in: &self.anyCancelable)
     }
     
     func addCustomization(_ customization: Product.Customization, option: Product.Customization.Option) {
         options[customization] = option
-        
-//        if let price = option.price {
-//            switch customization.priceChangeMethod {
-//            case .changeBasePrice:
-//                self.basePrice = price
-//            case .sumBasePrice:
-//                self.additionalPrice = options
-//                    .filter({ $0.key.priceChangeMethod == .sumBasePrice })
-//                    .map({ $0.value?.price ?? 0 })
-//                    .reduce(0, +)
-//            default:
-//                break
-//            }
-//        } else {
-//            switch customization.priceChangeMethod {
-//            case .changeBasePrice:
-//                self.basePrice = self.selectedOption.price ?? 0
-//            case .sumBasePrice:
-//                self.additionalPrice = options
-//                    .filter({ $0.key.priceChangeMethod == .sumBasePrice })
-//                    .map({ $0.value?.price ?? 0 })
-//                    .reduce(0, +)
-//            default:
-//                break
-//            }
-//        }
     }
     
 }

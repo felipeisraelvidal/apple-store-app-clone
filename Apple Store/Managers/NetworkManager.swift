@@ -11,7 +11,7 @@ import Combine
 class NetworkManager {
     static let shared = NetworkManager()
     
-    private let baseURL = "http://localhost:3000"
+    private let baseURL = "http://192.168.15.114:3000"
     
     private var anyCancelable = Set<AnyCancellable>()
     
@@ -109,6 +109,40 @@ class NetworkManager {
                     }
                 } receiveValue: { options in
                     promise(.success(options))
+                }
+                .store(in: &self.anyCancelable)
+        }
+        .eraseToAnyPublisher()
+    }
+    
+    func getProductOptionCustomizations(productId: Int, optionId: Int) -> AnyPublisher<[Product.Customization], Error> {
+        let url = URL(string: "\(baseURL)/products/\(productId)/options/\(optionId)/customizations")
+        
+        let decoder = JSONDecoder()
+        
+        return Future { [unowned self] promise in
+            URLSession.shared.dataTaskPublisher(for: url!)
+                .retry(1)
+                .mapError({ $0 })
+                .tryMap { element -> Data in
+                    guard let httpResponse = element.response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                        throw URLError(.badServerResponse)
+                    }
+                    return element.data
+                }
+                .decode(type: [Product.Customization].self, decoder: decoder)
+                .receive(on: DispatchQueue.main)
+                .sink { completion in
+                    switch completion {
+                    case .finished:
+                        print("Done")
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                        promise(.failure(error))
+                    }
+                } receiveValue: { customizations in
+                    print(customizations)
+                    promise(.success(customizations))
                 }
                 .store(in: &self.anyCancelable)
         }

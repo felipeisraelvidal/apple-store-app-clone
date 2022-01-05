@@ -53,8 +53,7 @@ class BuyProductViewController: UIViewController {
         
         title = viewModel.selectedProduct.name
         
-        view.backgroundColor = .systemBackground
-        tableView.backgroundColor = .systemBackground
+        view.backgroundColor = .systemGroupedBackground
         
         tableView.delegate = self
         tableView.dataSource = self

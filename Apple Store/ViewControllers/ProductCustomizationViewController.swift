@@ -13,6 +13,7 @@ class ProductCustomizationViewController: UIViewController {
     weak var coordinator: ShopCoordinator?
     
     private var viewModel: ProductCustomizationViewModel
+    private var anyCancellable = Set<AnyCancellable>()
     
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
@@ -78,6 +79,16 @@ class ProductCustomizationViewController: UIViewController {
         return label
     }()
     
+    private let loadingLabel: UILabel = {
+        let label = UILabel()
+        label.font = .preferredFont(for: .title3, weight: .semibold)
+        label.textColor = .secondaryLabel
+        label.text = "Loading Customizations"
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
+    }()
+    
     init(viewModel: ProductCustomizationViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -109,6 +120,22 @@ class ProductCustomizationViewController: UIViewController {
         frame.size.height = .leastNormalMagnitude
         let headerView = UIView(frame: frame)
         tableView.tableHeaderView = headerView
+        
+        viewModel.$customizations
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.tableView.reloadData()
+            }
+            .store(in: &anyCancellable)
+        
+        viewModel.$isLoading
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] value in
+                self?.tableView.backgroundView = value == true ? self?.loadingLabel : nil
+            }
+            .store(in: &self.anyCancellable)
+        
+        fetchProductOptionCustomizations()
         
         viewModel.$finalPrice
             .map { price in
@@ -177,6 +204,12 @@ class ProductCustomizationViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
     }
     
+    // MARK: - Functions
+    
+    private func fetchProductOptionCustomizations() {
+        viewModel.fetchProductOptionCustomizations()
+    }
+    
     // MARK: - Actions
     
     @objc private func addToCartButtonTapped(_ sender: UIButton) {
@@ -188,7 +221,7 @@ class ProductCustomizationViewController: UIViewController {
 extension ProductCustomizationViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1 + (viewModel.selectedOption.customizations?.count ?? 0)
+        return 1 + viewModel.customizations.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -196,9 +229,7 @@ extension ProductCustomizationViewController: UITableViewDataSource, UITableView
         case 0:
             return nil
         default:
-            guard let customization = viewModel.selectedOption.customizations?[section - 1] else { return nil }
-            
-            return customization.name
+            return viewModel.customizations[section - 1].name
         }
     }
     
@@ -207,9 +238,7 @@ extension ProductCustomizationViewController: UITableViewDataSource, UITableView
         case 0:
             return 1
         default:
-            guard let customization = viewModel.selectedOption.customizations?[section - 1] else { return 0 }
-            
-            return customization.options.count
+            return viewModel.customizations[section - 1].items.count
         }
     }
     
@@ -227,11 +256,9 @@ extension ProductCustomizationViewController: UITableViewDataSource, UITableView
                 return UITableViewCell()
             }
             
-            guard let customization = viewModel.selectedOption.customizations?[indexPath.section - 1] else {
-                return UITableViewCell()
-            }
+            let customization = viewModel.customizations[indexPath.section - 1]
             
-            let option = customization.options[indexPath.row]
+            let option = customization.items[indexPath.row]
             
             cell.configure(with: option, priceChangeMethod: customization.priceChangeMethod)
             
@@ -261,7 +288,8 @@ extension ProductCustomizationViewController: UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if section != 0 {
             guard let headerView = view as? UITableViewHeaderFooterView else { return }
-            guard let customization = viewModel.selectedOption.customizations?[section - 1] else { return }
+            
+            let customization = viewModel.customizations[section - 1]
             
             headerView.textLabel?.font = .preferredFont(for: .title3, weight: .bold)
             headerView.textLabel?.text = customization.name.capitalized
@@ -270,9 +298,9 @@ extension ProductCustomizationViewController: UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let customization = viewModel.selectedOption.customizations?[indexPath.section - 1] else { return }
+        let customization = viewModel.customizations[indexPath.section - 1]
 
-        let option = customization.options[indexPath.row]
+        let option = customization.items[indexPath.row]
 
         viewModel.addCustomization(customization, option: option)
     }
@@ -328,48 +356,7 @@ struct ProductCustomizationViewControllerPreviews: PreviewProvider {
                 "Two Thunderbolt / USB 4 ports"
             ],
             price: 999,
-            availableFinishes: nil,
-            customizations: [
-                .init(
-                    id: 0,
-                    name: "Memory",
-                    options: [
-                        .init(
-                            id: 0,
-                            name: "Item 1",
-                            price: 0
-                        ),
-                        .init(
-                            id: 1,
-                            name: "Item 2",
-                            price: 200
-                        )
-                    ],
-                    priceChangeMethod: .sumBasePrice
-                ),
-                .init(
-                    id: 1,
-                    name: "Storage",
-                    options: [
-                        .init(
-                            id: 0,
-                            name: "Item 1",
-                            price: 0
-                        ),
-                        .init(
-                            id: 1,
-                            name: "Item 2",
-                            price: 200
-                        ),
-                        .init(
-                            id: 2,
-                            name: "Item 3",
-                            price: 400
-                        )
-                    ],
-                    priceChangeMethod: .sumBasePrice
-                )
-            ]
+            availableFinishes: nil
         )
         
         func makeUIViewController(context: Context) -> UIViewControllerType {
