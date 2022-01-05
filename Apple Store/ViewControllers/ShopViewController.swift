@@ -30,16 +30,6 @@ class ShopViewController: UIViewController {
         return tableView
     }()
     
-    private let loadingLabel: UILabel = {
-        let label = UILabel()
-        label.font = .preferredFont(for: .title3, weight: .semibold)
-        label.textColor = .secondaryLabel
-        label.text = "Loading Families"
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        return label
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,13 +48,6 @@ class ShopViewController: UIViewController {
                 self?.tableView.reloadData()
             }
             .store(in: &anyCancellable)
-        
-        viewModel.$isLoading
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] value in
-                self?.tableView.backgroundView = value == true ? self?.loadingLabel : nil
-            }
-            .store(in: &self.anyCancellable)
     }
     
     override func loadView() {
