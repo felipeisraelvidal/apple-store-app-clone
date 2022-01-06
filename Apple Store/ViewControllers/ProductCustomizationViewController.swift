@@ -248,7 +248,7 @@ extension ProductCustomizationViewController: UITableViewDataSource, UITableView
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductCustomizationHeroTableViewCell.identifier, for: indexPath) as? ProductCustomizationHeroTableViewCell else {
                 return UITableViewCell()
             }
-            cell.configure(with: viewModel.selectedProduct, option: viewModel.selectedOption)
+            cell.configure(with: viewModel.selectedProduct, option: viewModel.selectedOption, selectedFinish: viewModel.selectedFinish)
             
             return cell
         default:
@@ -311,7 +311,6 @@ extension ProductCustomizationViewController: UITableViewDataSource, UITableView
 import SwiftUI
 
 struct ProductCustomizationViewControllerPreviews: PreviewProvider {
-    
     static var previews: some View {
         ContainerPreview()
             .ignoresSafeArea()
@@ -320,7 +319,7 @@ struct ProductCustomizationViewControllerPreviews: PreviewProvider {
     struct ContainerPreview: UIViewControllerRepresentable {
         typealias UIViewControllerType = UITabBarController
         
-        let product = Product(
+        let selectedProduct = Product(
             id: 0,
             model: ProductModel(
                 id: 1,
@@ -341,7 +340,7 @@ struct ProductCustomizationViewControllerPreviews: PreviewProvider {
             )
         )
         
-        let option: Product.Option = .init(
+        let selectedOption: Product.Option = .init(
             id: 0,
             name: "Apple M1 Chip with 8-Core CPU and 7-Core GPU 256GB Storage",
             imageURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000",
@@ -359,8 +358,14 @@ struct ProductCustomizationViewControllerPreviews: PreviewProvider {
             availableFinishes: nil
         )
         
+        let selectedFinish: Product.Finish = .init(
+            id: 1,
+            name: "Space Gray",
+            imageURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000"
+        )
+        
         func makeUIViewController(context: Context) -> UIViewControllerType {
-            let viewModel = ProductCustomizationViewModel(selectedProduct: product, selectedOption: option)
+            let viewModel = ProductCustomizationViewModel(selectedProduct: self.selectedProduct, selectedOption: selectedOption, selectedFinish: selectedFinish)
             let viewController = ProductCustomizationViewController(viewModel: viewModel)
             viewController.tabBarItem = UITabBarItem(title: "Customize", image: UIImage(systemName: "star"), tag: 0)
             let navController = UINavigationController(rootViewController: viewController)

@@ -81,11 +81,19 @@ class ProductCustomizationHeroTableViewCell: UITableViewCell {
         
     }
     
-    func configure(with model: Product, option: Product.Option) {
-        titleLabel.text = "Customize your new \(model.name)"
+    func configure(with model: Product, option: Product.Option, selectedFinish: Product.Finish?) {
+        if let selectedFinish = selectedFinish {
+            titleLabel.text = "Customize your new \(model.name) – \(selectedFinish.name)"
+        } else {
+            titleLabel.text = "Customize your new \(model.name)"
+        }
         
-        guard let urlString = option.imageURL else { return }
-        heroImageView.sd_setImage(with: URL(string: urlString), completed: nil)
+        if let imageURL = selectedFinish?.imageURL {
+            heroImageView.sd_setImage(with: URL(string: imageURL), completed: nil)
+        } else {
+            guard let urlString = option.imageURL else { return }
+            heroImageView.sd_setImage(with: URL(string: urlString), completed: nil)
+        }
     }
 
 }

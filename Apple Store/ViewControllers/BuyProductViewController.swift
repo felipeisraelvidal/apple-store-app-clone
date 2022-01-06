@@ -133,8 +133,8 @@ extension BuyProductViewController: UITableViewDelegate, UITableViewDataSource {
             let option = viewModel.productOptions[indexPath.row]
             cell.configure(with: option)
             
-            cell.onTapSelectButton = { [unowned self] productOption in
-                self.coordinator?.customizeProductOption(viewModel.selectedProduct, option: productOption)
+            cell.onTapSelectButton = { [unowned self] productOption, selectedFinish in
+                self.coordinator?.customizeProductOption(viewModel.selectedProduct, option: productOption, selectedFinish: selectedFinish)
             }
             
             return cell

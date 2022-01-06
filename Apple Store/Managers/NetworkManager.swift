@@ -35,9 +35,8 @@ class NetworkManager {
                 .sink { completion in
                     switch completion {
                     case .finished:
-                        print("Done")
+                        break
                     case .failure(let error):
-                        print(error.localizedDescription)
                         promise(.failure(error))
                     }
                 } receiveValue: { families in
@@ -68,9 +67,8 @@ class NetworkManager {
                 .sink { completion in
                     switch completion {
                     case .finished:
-                        print("Done")
+                        break
                     case .failure(let error):
-                        print(error.localizedDescription)
                         promise(.failure(error))
                     }
                 } receiveValue: { products in
@@ -102,9 +100,8 @@ class NetworkManager {
                 .sink { completion in
                     switch completion {
                     case .finished:
-                        print("Done")
+                        break
                     case .failure(let error):
-                        print(error.localizedDescription)
                         promise(.failure(error))
                     }
                 } receiveValue: { options in
@@ -135,13 +132,11 @@ class NetworkManager {
                 .sink { completion in
                     switch completion {
                     case .finished:
-                        print("Done")
+                        break
                     case .failure(let error):
-                        print(error.localizedDescription)
                         promise(.failure(error))
                     }
                 } receiveValue: { customizations in
-                    print(customizations)
                     promise(.success(customizations))
                 }
                 .store(in: &self.anyCancelable)

@@ -13,7 +13,7 @@ class BuyProductOptionTableViewCell: UITableViewCell {
     
     private var productOption: Product.Option!
     
-    var onTapSelectButton: ((Product.Option) -> Void)?
+    var onTapSelectButton: ((Product.Option, Product.Finish?) -> Void)?
     
     private let productImageView: UIImageView = {
         let imageView = UIImageView()
@@ -170,7 +170,11 @@ class BuyProductOptionTableViewCell: UITableViewCell {
     }
     
     @objc private func selectButtonTapped(_ sender: UIButton) {
-        onTapSelectButton?(productOption)
+        if let availableFinishes = productOption.availableFinishes, !availableFinishes.isEmpty {
+            onTapSelectButton?(productOption, availableFinishes[finishSegmentedControl.selectedSegmentIndex])
+        } else {
+            onTapSelectButton?(productOption, nil)
+        }
     }
 
 }

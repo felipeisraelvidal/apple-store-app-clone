@@ -12,6 +12,7 @@ final class ProductCustomizationViewModel {
     
     private(set) var selectedProduct: Product
     private(set) var selectedOption: Product.Option
+    private(set) var selectedFinish: Product.Finish?
     
     @Published private(set) var customizations: [Product.Customization] = []
     @Published private(set) var isLoading = false
@@ -48,9 +49,10 @@ final class ProductCustomizationViewModel {
     
     private var finalPriceSubscriber: AnyCancellable?
     
-    init(selectedProduct: Product, selectedOption: Product.Option) {
+    init(selectedProduct: Product, selectedOption: Product.Option, selectedFinish: Product.Finish?) {
         self.selectedProduct = selectedProduct
         self.selectedOption = selectedOption
+        self.selectedFinish = selectedFinish
         
 //        self.basePrice = selectedOption.price ?? 0
         self.finalPrice = selectedOption.price ?? 0
