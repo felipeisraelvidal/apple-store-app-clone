@@ -11,6 +11,7 @@
 		553789B2277D606F00D2505B /* products_models.json in Resources */ = {isa = PBXBuildFile; fileRef = 553789B1277D606F00D2505B /* products_models.json */; };
 		554568D7278D20A4000D2E38 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554568D6278D20A4000D2E38 /* MainTabBarController.swift */; };
 		556D9A20278DCEC0007CD831 /* CartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D9A1F278DCEC0007CD831 /* CartCoordinator.swift */; };
+		556D9A22278DD58E007CD831 /* SearchProductsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D9A21278DD58E007CD831 /* SearchProductsCoordinator.swift */; };
 		5573D2F4278AAB31000332D9 /* Modules in Frameworks */ = {isa = PBXBuildFile; productRef = 5573D2F3278AAB31000332D9 /* Modules */; };
 		55C31CD6277D4E64003FAA91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C31CD5277D4E64003FAA91 /* AppDelegate.swift */; };
 		55C31CD8277D4E64003FAA91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C31CD7277D4E64003FAA91 /* SceneDelegate.swift */; };
@@ -45,6 +46,7 @@
 		553789B1277D606F00D2505B /* products_models.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = products_models.json; sourceTree = "<group>"; };
 		554568D6278D20A4000D2E38 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		556D9A1F278DCEC0007CD831 /* CartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCoordinator.swift; sourceTree = "<group>"; };
+		556D9A21278DD58E007CD831 /* SearchProductsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductsCoordinator.swift; sourceTree = "<group>"; };
 		5573D2F1278AAA3C000332D9 /* Modules */ = {isa = PBXFileReference; lastKnownFileType = text; path = Modules; sourceTree = SOURCE_ROOT; };
 		5573ED9F277EB799007FA0D4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55C31CD2277D4E64003FAA91 /* Apple Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +166,7 @@
 				55C31D06277D4E98003FAA91 /* Coordinator.swift */,
 				55C31D0E277D4FB2003FAA91 /* ShopCoordinator.swift */,
 				556D9A1F278DCEC0007CD831 /* CartCoordinator.swift */,
+				556D9A21278DD58E007CD831 /* SearchProductsCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55C31CD6277D4E64003FAA91 /* AppDelegate.swift in Sources */,
+				556D9A22278DD58E007CD831 /* SearchProductsCoordinator.swift in Sources */,
 				55C31CD8277D4E64003FAA91 /* SceneDelegate.swift in Sources */,
 				554568D7278D20A4000D2E38 /* MainTabBarController.swift in Sources */,
 				55C31D0F277D4FB2003FAA91 /* ShopCoordinator.swift in Sources */,

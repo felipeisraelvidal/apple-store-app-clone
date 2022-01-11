@@ -16,7 +16,8 @@ let package = Package(
                 "ProductDetails",
                 "BuyProduct",
                 "CustomizeProductOption",
-                "Cart"
+                "Cart",
+                "SearchProducts"
             ]),
     ],
     dependencies: [
@@ -63,6 +64,12 @@ let package = Package(
         .testTarget(
             name: "CustomizeProductOptionTests",
             dependencies: ["CustomizeProductOption"]),
+        .target(
+            name: "SearchProducts",
+            dependencies: []),
+        .testTarget(
+            name: "SearchProductsTests",
+            dependencies: ["SearchProducts"]),
         .target(
             name: "Cart",
             dependencies: []),
