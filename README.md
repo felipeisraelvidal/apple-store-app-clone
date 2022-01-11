@@ -35,3 +35,11 @@ public final class NetworkManager {
     ...
 }
 ```
+
+## Coordinators
+
+As mentioned earlier, this project was developed using the Coordinator design pattern. This is considered one of the ideal patterns to use with UIKit.
+
+Below is a diagram of what the app's architecture would look like when finished.
+
+![diagram](https://user-images.githubusercontent.com/41072759/148875595-e5eb6d7f-9712-4014-969b-ccbc4d1b332d.png) 
