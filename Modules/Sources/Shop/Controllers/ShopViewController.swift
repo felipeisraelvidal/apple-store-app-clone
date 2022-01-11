@@ -42,6 +42,16 @@ public class ShopViewController: UIViewController {
         return indicator
     }()
     
+    private let errorLabel: UILabel = {
+        let label = UILabel()
+        label.font = .preferredFont(for: .title2, weight: .bold)
+        label.text = "Error"
+        label.textColor = .secondaryLabel
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
+    }()
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,6 +81,14 @@ public class ShopViewController: UIViewController {
                 } else {
                     self?.loadingIndicator.stopAnimating()
                 }
+            }
+            .store(in: &anyCancellable)
+        
+        viewModel.$errorMessage
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] errorMessage in
+                self?.errorLabel.text = errorMessage
+                self?.tableView.backgroundView = errorMessage != nil ? self?.errorLabel : nil
             }
             .store(in: &anyCancellable)
         
