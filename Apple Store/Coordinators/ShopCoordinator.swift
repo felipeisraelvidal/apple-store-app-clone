@@ -6,6 +6,12 @@
 //
 
 import UIKit
+import Coordinator
+import Shop
+import Core
+import ProductDetails
+import BuyProduct
+import CustomizeProductOption
 
 class ShopCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
@@ -16,53 +22,59 @@ class ShopCoordinator: Coordinator {
     }
     
     func start() {
-        let viewController = ShopViewController()
+        let viewModel = ShopViewModel()
+        let viewController = ShopViewController(viewModel: viewModel)
         viewController.title = "Shop"
         viewController.tabBarItem.image = UIImage(systemName: "laptopcomputer.and.iphone")
         viewController.coordinator = self
+        
+        viewController.onSelectProduct = { [weak self] product in
+            self?.openProductDetails(product)
+        }
+        
+        viewController.onTapBuyButton = { [weak self] product in
+            self?.buyProduct(product)
+        }
+        
         navigationController.setViewControllers([viewController], animated: false)
     }
     
-    func openProductDetails(_ model: Product) {
-        let viewModel = ProductDetailsViewModel(selectedProduct: model)
+    func openProductDetails(_ model: Core.Product) {
+        let viewModel = ProductDetailsViewModel(
+            product: model
+        )
         let viewController = ProductDetailsViewController(viewModel: viewModel)
-        viewController.coordinator = self
+        
+        viewController.onTapCloseButton = { [weak self] in
+            self?.dismiss(viewController)
+        }
+        
         let navController = UINavigationController(rootViewController: viewController)
         navController.modalPresentationStyle = .fullScreen
         navigationController.topViewController?.present(navController, animated: true, completion: nil)
     }
     
-    func buyProduct(_ model: Product) {
-//        guard let options = model.options, !options.isEmpty else {
-//            print("This product has no options")
-//            return
-//        }
-//
-//        if options.count > 1 {
-//            // Show options selector
-//
-//            let viewModel = BuyProductViewModel(selectedProduct: model)
-//            let viewController = BuyProductViewController(viewModel: viewModel)
-//            viewController.coordinator = self
-//            navigationController.pushViewController(viewController, animated: true)
-//        } else {
-//            // Show product customization
-//            let viewModel = ProductCustomizationViewModel(selectedProduct: model, selectedOption: options[0])
-//            let viewController = ProductCustomizationViewController(viewModel: viewModel)
-//            viewController.coordinator = self
-//            navigationController.pushViewController(viewController, animated: true)
-//        }
-        
-        let viewModel = BuyProductViewModel(selectedProduct: model)
+    func buyProduct(_ model: Core.Product) {
+        let viewModel = BuyProductViewModel(product: model)
         let viewController = BuyProductViewController(viewModel: viewModel)
-        viewController.coordinator = self
+        
+        viewController.onTapSelectButton = { [weak self] productOption, selectedFinish in
+            self?.customizeProductOption(viewModel.product, option: productOption, selectedFinish: selectedFinish)
+        }
+        
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func customizeProductOption(_ product: Product, option: Product.Option, selectedFinish: Product.Finish?) {
-        let viewModel = ProductCustomizationViewModel(selectedProduct: product, selectedOption: option, selectedFinish: selectedFinish)
-        let viewController = ProductCustomizationViewController(viewModel: viewModel)
-        viewController.coordinator = self
+    func customizeProductOption(_ product: Core.Product, option: ProductOption, selectedFinish: Finish?) {
+        let viewModel = CustomizeProductViewModel(
+            selectedProduct: product,
+            selectedProductOption: option,
+            selectedFinish: selectedFinish
+        )
+        let viewController = CustomizeProductOptionViewController(
+            viewModel: viewModel
+        )
+        
         navigationController.pushViewController(viewController, animated: true)
     }
     
