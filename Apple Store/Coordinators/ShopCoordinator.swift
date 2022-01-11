@@ -37,7 +37,7 @@ class ShopCoordinator: Coordinator {
         navigationController.setViewControllers([viewController], animated: false)
     }
     
-    func openProductDetails(_ model: Core.Product) {
+    func openProductDetails(_ model: Product) {
         let viewModel = ProductDetailsViewModel(
             product: model
         )
@@ -52,7 +52,7 @@ class ShopCoordinator: Coordinator {
         navigationController.topViewController?.present(navController, animated: true, completion: nil)
     }
     
-    func buyProduct(_ model: Core.Product) {
+    func buyProduct(_ model: Product) {
         let viewModel = BuyProductViewModel(product: model)
         let viewController = BuyProductViewController(viewModel: viewModel)
         
@@ -63,7 +63,7 @@ class ShopCoordinator: Coordinator {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func customizeProductOption(_ product: Core.Product, option: ProductOption, selectedFinish: Finish?) {
+    func customizeProductOption(_ product: Product, option: ProductOption, selectedFinish: Finish?) {
         let viewModel = CustomizeProductViewModel(
             selectedProduct: product,
             selectedProductOption: option,
