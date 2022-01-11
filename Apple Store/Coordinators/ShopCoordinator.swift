@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Coordinator
 import Shop
 import Core
 import ProductDetails
@@ -26,7 +25,6 @@ class ShopCoordinator: Coordinator {
         let viewController = ShopViewController(viewModel: viewModel)
         viewController.title = "Shop"
         viewController.tabBarItem.image = UIImage(systemName: "laptopcomputer.and.iphone")
-        viewController.coordinator = self
         
         viewController.onSelectProduct = { [weak self] product in
             self?.openProductDetails(product)

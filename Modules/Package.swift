@@ -39,29 +39,26 @@ let package = Package(
             name: "NetworkingTests",
             dependencies: ["Networking"]),
         .target(
-            name: "Coordinator",
-            dependencies: []),
-        .target(
             name: "Shop",
-            dependencies: ["Coordinator", "Core", "Networking", "SDWebImage"]),
+            dependencies: ["Core", "Networking", "SDWebImage"]),
         .testTarget(
             name: "ShopTests",
             dependencies: ["Shop"]),
         .target(
             name: "ProductDetails",
-            dependencies: ["Coordinator", "Core", "Networking", "SDWebImage"]),
+            dependencies: ["Core", "Networking", "SDWebImage"]),
         .testTarget(
             name: "ProductDetailsTests",
             dependencies: ["ProductDetails"]),
         .target(
             name: "BuyProduct",
-            dependencies: ["Coordinator", "Core", "Networking", "SDWebImage"]),
+            dependencies: ["Core", "Networking", "SDWebImage"]),
         .testTarget(
             name: "BuyProductTests",
             dependencies: ["BuyProduct"]),
         .target(
             name: "CustomizeProductOption",
-            dependencies: ["Coordinator", "Core", "Networking", "SDWebImage"]),
+            dependencies: ["Core", "Networking", "SDWebImage"]),
         .testTarget(
             name: "CustomizeProductOptionTests",
             dependencies: ["CustomizeProductOption"]),

@@ -1,11 +1,8 @@
 import UIKit
 import Combine
-import Coordinator
 import Core
 
 public class ShopViewController: UIViewController {
-    
-    public weak var coordinator: Coordinator?
     
     private var viewModel: ShopViewModel
     
