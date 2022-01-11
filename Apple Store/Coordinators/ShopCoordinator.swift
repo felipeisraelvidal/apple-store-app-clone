@@ -24,7 +24,7 @@ class ShopCoordinator: Coordinator {
         let viewModel = ShopViewModel()
         let viewController = ShopViewController(viewModel: viewModel)
         viewController.title = "Shop"
-        viewController.tabBarItem.image = UIImage(systemName: "laptopcomputer.and.iphone")
+        viewController.tabBarItem = UITabBarItem(title: "Shop", image: UIImage(systemName: "laptopcomputer.and.iphone"), tag: 0)
         
         viewController.onSelectProduct = { [weak self] product in
             self?.openProductDetails(product)

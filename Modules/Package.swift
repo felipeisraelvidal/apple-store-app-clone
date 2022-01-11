@@ -15,7 +15,8 @@ let package = Package(
                 "Shop",
                 "ProductDetails",
                 "BuyProduct",
-                "CustomizeProductOption"
+                "CustomizeProductOption",
+                "Cart"
             ]),
     ],
     dependencies: [
@@ -62,5 +63,11 @@ let package = Package(
         .testTarget(
             name: "CustomizeProductOptionTests",
             dependencies: ["CustomizeProductOption"]),
+        .target(
+            name: "Cart",
+            dependencies: []),
+        .testTarget(
+            name: "CartTests",
+            dependencies: ["Cart"]),
     ]
 )
