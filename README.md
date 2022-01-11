@@ -42,4 +42,12 @@ As mentioned earlier, this project was developed using the Coordinator design pa
 
 Below is a diagram of what the app's architecture would look like when finished.
 
-![diagram](https://user-images.githubusercontent.com/41072759/148875595-e5eb6d7f-9712-4014-969b-ccbc4d1b332d.png) 
+![diagram](https://user-images.githubusercontent.com/41072759/148875595-e5eb6d7f-9712-4014-969b-ccbc4d1b332d.png)
+
+## Screenshots
+
+### Shop
+
+The Shop tab shows all products available for sale. The user can choose one of these products, select an option if available, and customize it if customization is available. Then the product can be added to the cart.
+
+![banner1](https://user-images.githubusercontent.com/41072759/148984517-3d1ae00b-794d-44fb-b784-f63260c68159.png)
